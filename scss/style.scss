@@ -1,0 +1,9 @@
+@import "fonts";
+
+// Optional: override Bootstrap variables first
+@import "custom-variables";
+
+// Then import Bootstrap SCSS
+@import "bootstrap/bootstrap";
+
+@import "custom-style";

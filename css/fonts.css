@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "IBMPlexSansArabic-Regular";
+  src: url("../fonts/IBMPlexSansArabic-Regular.woff2") format("woff2"), url("../fonts/IBMPlexSansArabic-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSansArabic-Bold";
+  src: url("../fonts/IBMPlexSansArabic-Bold.woff2") format("woff2"), url("../fonts/IBMPlexSansArabic-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSansArabic-Medium";
+  src: url("../fonts/IBMPlexSansArabic-Medium.woff2") format("woff2"), url("../fonts/IBMPlexSansArabic-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSansArabic-SemiBold";
+  src: url("../fonts/IBMPlexSansArabic-SemiBold.woff2") format("woff2"), url("../fonts/IBMPlexSansArabic-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSansArabic-Light";
+  src: url("../fonts/IBMPlexSansArabic-Light.woff2") format("woff2"), url("../fonts/IBMPlexSansArabic-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBMPlexSansArabic-ExtraLight";
+  src: url("../fonts/IBMPlexSansArabic-ExtraLight.woff2") format("woff2"), url("../fonts/IBMPlexSansArabic-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}/*# sourceMappingURL=fonts.css.map */

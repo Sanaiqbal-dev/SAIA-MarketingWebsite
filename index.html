@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SIIA</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <style>
+      .sitemap-section {
+        border: 1px solid #dee2e6;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        background-color: #f8f9fa;
+      }
+
+      .sitemap-link {
+        display: block;
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.25rem;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        transition: background-color 0.2s;
+      }
+
+      .sitemap-link:hover {
+        background-color: #e9ecef;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="py-3 border-bottom bg-white">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-2">
+          <div
+            class="rounded-circle bg-light"
+            style="width: 50px; height: 50px"
+          ></div>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="d-flex align-items-center gap-3">
+          <!-- Search (optional static icon) -->
+          <form class="position-relative d-none d-lg-block">
+            <input
+              type="search"
+              class="form-control form-control-sm ps-8"
+              placeholder="Search"
+            />
+            <i
+              class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-2 text-body-tertiary small"
+            ></i>
+          </form>
+
+          <!-- Language Dropdown -->
+          <div class="dropdown">
+            <button
+              class="btn btn-sm btn-outline-secondary dropdown-toggle border text-body"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              English
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">العربية</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Us -->
+          <a href="#" class="btn btn-sm btn-primary">Contact Us</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container my-5">
+      <h2 class="mb-4">📌 Sitemap</h2>
+
+      <div class="vstack gap-4 mb-4">
+        <!-- Brand Guide -->
+        <div class="">
+          <div class="sitemap-section">
+            <h5 class="mb-3">🛠️ Brand Guide</h5>
+
+            <a href="brand-guide.html" class="sitemap-link">Brand Guide</a>
+          </div>
+        </div>
+
+        <!-- Admin -->
+        <div class="">
+          <div class="sitemap-section">
+            <h5 class="mb-3">🛠️ Admin Pages</h5>
+            <a href="admin/login.html" class="sitemap-link">Login</a>
+            <a href="admin/forgot-password.html" class="sitemap-link"
+              >Forgot Password</a
+            >
+            <a href="admin/courses.html" class="sitemap-link">Courses</a>
+            <a href="admin/create-course.html" class="sitemap-link"
+              >Create Course</a
+            >
+            <a href="admin/view-courses.html" class="sitemap-link"
+              >View Course</a
+            >
+          </div>
+        </div>
+
+        <!-- Trainer -->
+        <div class="">
+          <div class="sitemap-section">
+            <h5 class="mb-3">👨‍🏫 Trainer Pages</h5>
+            <a href="trainer/login.html" class="sitemap-link">Login</a>
+            <a href="trainer/forgot-password.html" class="sitemap-link"
+              >Forgot Password</a
+            ><a href="trainer/signup-personalInfo.html" class="sitemap-link"
+              >Signup Personal Info</a
+            >
+            <a href="trainer/signup-qualifications.html" class="sitemap-link"
+              >Signup Qualifications</a
+            >
+            <a href="trainer/signup-experience.html" class="sitemap-link"
+              >Signup Experience</a
+            >
+            <a href="trainer/submit-thankyou-dialog.html" class="sitemap-link"
+              >Thankyou</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row g-4">
+        <!-- Trainee/Student -->
+        <div class="">
+          <div class="sitemap-section">
+            <h5 class="mb-3">👩‍🎓 Trainee/Student Pages</h5>
+            <a href="trainee/login.html" class="sitemap-link">Login</a>
+            <a href="trainee/forgot-password.html" class="sitemap-link"
+              >Forgot Password</a
+            ><a
+              href="trainee/signup-personalInfo-trainee.html"
+              class="sitemap-link"
+              >Signup Personal Info</a
+            >
+            <a href="trainee/password-setting.html" class="sitemap-link"
+              >Password Setting</a
+            >
+
+            <a href="trainee/memberships.html" class="sitemap-link"
+              >Memberships</a
+            >
+            <a href="trainee/courses.html" class="sitemap-link">Courses</a>
+            <a href="trainee/view-available-courses.html" class="sitemap-link"
+              >View Available Courses</a
+            >
+            <a href="trainee/courses-payment-process.html" class="sitemap-link"
+              >Courses Payment Process</a
+            >
+            <a href="trainee/membership-plan.html" class="sitemap-link"
+              >Membership Plan</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
