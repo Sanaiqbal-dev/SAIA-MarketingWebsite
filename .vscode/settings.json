@@ -7,5 +7,14 @@
             "savePath": "/css",
             "savePathReplacementPairs": null
         }
-    ]
+    ],
+    {
+        "liveServer.settings.wait": 100,
+        "liveServer.settings.donotShowInfoMsg": true,
+        "liveServer.settings.ignoreFiles": [
+            ".vscode/**",
+            "**/*.scss",
+            "**/*.sass"
+        ]
+    }
 }

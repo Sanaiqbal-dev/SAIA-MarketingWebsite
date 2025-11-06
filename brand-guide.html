@@ -160,897 +160,6 @@
           </div>
         </div>
       </section>
-
-      <section class="mb-8 pb-8 border-bottom">
-        <h2 class="mb-1 text-primary">Badges</h2>
-        <p class="mb-5 text-muted">Badges style</p>
-        <div class="d-flex gap-3">
-          <p>
-            <span class="badge bg-success-subtle text-success badge-status"
-              >Success</span
-            >
-          </p>
-          <p>
-            <span class="badge bg-warning-subtle text-warning badge-status"
-              >Pending</span
-            >
-          </p>
-          <p>
-            <span class="badge bg-danger-subtle text-danger badge-status"
-              >Rejected</span
-            >
-          </p>
-        </div>
-      </section>
-
-      <!-- Alerts -->
-      <section class="mb-8 pb-8 border-bottom">
-        <h2 class="mb-1 text-primary">Alerts</h2>
-        <p class="text-muted mb-5">
-          Alert feedback messages styled with color classes.
-        </p>
-
-        <div class="alert alert-primary" role="alert">
-          <i class="bi bi-info-circle-fill me-2"></i>
-          This is a primary alert with an icon.
-        </div>
-
-        <div class="alert alert-secondary" role="alert">
-          <i class="bi bi-info-square-fill me-2"></i>
-          This is a secondary alert with an icon.
-        </div>
-
-        <div class="alert alert-success" role="alert">
-          <i class="bi bi-check-circle-fill me-2"></i>
-          Success! Your action was completed.
-        </div>
-
-        <div class="alert alert-danger" role="alert">
-          <i class="bi bi-exclamation-triangle-fill me-2"></i>
-          Error! Something went wrong.
-        </div>
-
-        <div class="alert alert-warning" role="alert">
-          <i class="bi bi-exclamation-triangle me-2"></i>
-          Warning! Please check your input.
-        </div>
-
-        <div class="alert alert-info" role="alert">
-          <i class="bi bi-info-lg me-2"></i>
-          For your information: updates are available.
-        </div>
-
-        <div class="alert alert-light" role="alert">
-          <i class="bi bi-lightbulb-fill me-2"></i>
-          Light alert with icon and soft background.
-        </div>
-      </section>
-
-      <!-- Cards -->
-      <section class="mb-8 pb-8 border-bottom">
-        <h2 class="mb-1 text-primary">Cards</h2>
-        <p class="text-muted mb-5">card styles for default and light bg</p>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card p-5">
-              <div class="card-body d-flex flex-column gap-3">
-                <h5 class="card-title">Default Card</h5>
-                <p class="card-text">
-                  This is a basic card with some supporting text and a call to
-                  action.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card bg-light p-5">
-              <div class="card-body d-flex flex-column gap-3">
-                <h5 class="card-title">Bg Card</h5>
-                <p class="card-text">
-                  This is a basic card with some supporting text and a call to
-                  action.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="mb-8 pb-8 border-bottom">
-        <h2 class="mb-1 text-primary">Tabs</h2>
-        <p class="text-muted mb-5">tabs style used for dashboard</p>
-        <div>
-          <!-- Tabs -->
-          <ul
-            class="nav nav-pills mb-4 border rounded-3 p-2 bg-light d-inline-flex"
-            id="myTab"
-          >
-            <li class="nav-item">
-              <button
-                class="nav-link btn-sm active"
-                id="tab-1"
-                data-bs-toggle="pill"
-                data-bs-target="#tab1"
-                type="button"
-                role="tab"
-              >
-                Tab button 1
-              </button>
-            </li>
-            <li class="nav-item">
-              <button
-                class="nav-link"
-                id="tab-2"
-                data-bs-toggle="pill"
-                data-bs-target="#tab2"
-                type="button"
-                role="tab"
-              >
-                Tab button 2
-              </button>
-            </li>
-          </ul>
-
-          <!-- Tab Content -->
-          <div class="tab-content" id="myTabContent">
-            <div
-              class="tab-pane fade show active"
-              id="tab1"
-              role="tabpanel"
-              aria-labelledby="tab-1"
-            >
-              <p>Tab Content here</p>
-            </div>
-
-            <!-- Classes Tab -->
-            <div
-              class="tab-pane fade"
-              id="tab2"
-              role="tabpanel"
-              aria-labelledby="tab-1"
-            >
-              <p>Tab Content here</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="mb-8 pb-8 border-bottom">
-        <h2 class="mb-5 text-primary">Table</h2>
-        <div class="table-responsive">
-          <table class="table">
-            <thead class="">
-              <tr>
-                <th>Full Name</th>
-                <th>National ID</th>
-                <th>Contact No#</th>
-                <th>Joining</th>
-                <th>Fee Status</th>
-                <th>Type</th>
-                <th>Enrollment</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Approved -->
-              <tr>
-                <td>
-                  <button
-                    type="button"
-                    class="btn btn-link p-0"
-                    data-bs-toggle="modal"
-                    data-bs-target="#editProfileModal"
-                  >
-                    <img
-                      src="https://i.pravatar.cc/100?img=1"
-                      alt="Profile"
-                      class="rounded-circle me-2"
-                      width="40"
-                    />Ahmed Ali
-                  </button>
-                </td>
-                <td>12345-1234567-1</td>
-                <td>+966 512345678</td>
-                <td>Jul 20, 25</td>
-                <td>
-                  <span class="text-success"
-                    ><i class="bi bi-check-circle me-1"></i> Paid</span
-                  >
-                </td>
-                <td>Individual</td>
-                <td>
-                  <span
-                    class="badge bg-success-subtle text-success badge-status"
-                    >Approved</span
-                  >
-                </td>
-                <td>
-                  <div>
-                    <button class="btn btn-outline-primary btn-sm">
-                      <i class="bi bi-pencil-square"></i> Edit
-                    </button>
-                    <button class="btn btn-outline-danger btn-sm">
-                      <i class="bi bi-trash"></i> Delete
-                    </button>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- Editable -->
-              <tr>
-                <td>
-                  <button
-                    type="button"
-                    class="btn btn-link p-0"
-                    data-bs-toggle="modal"
-                    data-bs-target="#editProfileModal"
-                  >
-                    <img
-                      src="https://i.pravatar.cc/100?img=1"
-                      alt="Profile"
-                      class="rounded-circle me-2"
-                      width="40"
-                    />Ahmed Ali
-                  </button>
-                </td>
-                <td>12345-1234567-1</td>
-                <td>+966 512345678</td>
-                <td>
-                  <input
-                    type="text"
-                    class="form-control form-control-sm"
-                    value="Jul 20, 25"
-                  />
-                </td>
-                <td>
-                  <select class="form-select form-select-sm">
-                    <option>Paid</option>
-                    <option>Pending</option>
-                  </select>
-                </td>
-                <td>Individual</td>
-                <td>
-                  <select class="form-select form-select-sm">
-                    <option>Approve</option>
-                    <option>Pending</option>
-                    <option>Rejected</option>
-                  </select>
-                </td>
-                <td>
-                  <div class="d-flex gap-2">
-                    <button class="btn btn-outline-danger btn-sm">
-                      Discard
-                    </button>
-                    <button class="btn btn-primary btn-sm">Save</button>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- Pending -->
-              <tr>
-                <td>
-                  <button
-                    type="button"
-                    class="btn btn-link p-0"
-                    data-bs-toggle="modal"
-                    data-bs-target="#editProfileModal"
-                  >
-                    <img
-                      src="https://i.pravatar.cc/100?img=1"
-                      alt="Profile"
-                      class="rounded-circle me-2"
-                      width="40"
-                    />Ahmed Ali
-                  </button>
-                </td>
-                <td>12345-1234567-1</td>
-                <td>+966 512345678</td>
-                <td>Jul 20, 25</td>
-                <td>
-                  <span class="text-warning"
-                    ><i class="bi bi-exclamation-circle me-1"></i> Pending</span
-                  >
-                </td>
-                <td>Individual</td>
-                <td>
-                  <span
-                    class="badge bg-warning-subtle text-warning badge-status"
-                    >Pending</span
-                  >
-                </td>
-                <td>
-                  <div class="d-flex gap-2 align-items-center">
-                    <button class="btn btn-outline-primary btn-sm">
-                      <i class="bi bi-pencil-square"></i> Edit
-                    </button>
-                    <button class="btn btn-outline-danger btn-sm">
-                      <i class="bi bi-trash"></i> Delete
-                    </button>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- Rejected -->
-              <tr>
-                <td>
-                  <button
-                    type="button"
-                    class="btn btn-link p-0"
-                    data-bs-toggle="modal"
-                    data-bs-target="#editProfileModal"
-                  >
-                    <img
-                      src="https://i.pravatar.cc/100?img=1"
-                      alt="Profile"
-                      class="rounded-circle me-2"
-                      width="40"
-                    />Ahmed Ali
-                  </button>
-                </td>
-                <td>12345-1234567-1</td>
-                <td>+966 512345678</td>
-                <td>Jul 20, 25</td>
-                <td>
-                  <span class="text-warning"
-                    ><i class="bi bi-exclamation-circle me-1"></i> Pending</span
-                  >
-                </td>
-                <td>Individual</td>
-                <td>
-                  <span class="badge bg-danger-subtle text-danger badge-status"
-                    >Rejected</span
-                  >
-                </td>
-                <td>
-                  <div class="d-flex gap-2">
-                    <button class="btn btn-outline-primary btn-sm">
-                      <i class="bi bi-pencil-square"></i> Edit
-                    </button>
-                    <button class="btn btn-outline-danger btn-sm">
-                      <i class="bi bi-trash"></i> Delete
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Bottom Controls -->
-        <div class="row align-items-center justify-content-between mt-3">
-          <div class="col-md-4">
-            <div class="d-flex align-items-center">
-              <span class="me-2">Show</span>
-              <input
-                type="text"
-                class="form-control form-control-sm"
-                style="width: 40px"
-                placeholder="10"
-              />
-              <span class="ms-2">Out of 13</span>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <nav aria-label="Page navigation">
-              <ul class="pagination justify-content-md-end mb-0">
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
-                </li>
-                <li class="page-item active">
-                  <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">2</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">3</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">4</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">5</a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </section>
-
-      <!-- Modals -->
-      <section class="mb-8 pb-8 border-bottom">
-        <h2 class="mb-5 text-primary">Modals</h2>
-        <p class="text-muted mb-5">
-          Preview of different Bootstrap 5 modal styles.
-        </p>
-
-        <div class="d-flex flex-wrap gap-3">
-          <button
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#basicModal"
-          >
-            Basic Modal
-          </button>
-
-          <button
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#editProfileModal"
-          >
-            Profile Modal
-          </button>
-
-          <button
-            class="btn btn-secondary"
-            data-bs-toggle="modal"
-            data-bs-target="#centeredModal"
-          >
-            Centered Modal
-          </button>
-          <button
-            class="btn btn-info text-white"
-            data-bs-toggle="modal"
-            data-bs-target="#scrollableModal"
-          >
-            Scrollable Modal
-          </button>
-          <button
-            class="btn btn-success"
-            data-bs-toggle="modal"
-            data-bs-target="#largeModal"
-          >
-            Large Modal
-          </button>
-          <button
-            class="btn btn-warning"
-            data-bs-toggle="modal"
-            data-bs-target="#smallModal"
-          >
-            Small Modal
-          </button>
-        </div>
-
-        <!-- Basic Modal -->
-        <div
-          class="modal fade"
-          id="basicModal"
-          tabindex="-1"
-          aria-labelledby="basicModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="basicModalLabel">Basic Modal</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                ></button>
-              </div>
-              <div class="modal-body">
-                This is a standard Bootstrap modal with header, body, and footer
-                sections.
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button type="button" class="btn btn-primary">
-                  Save changes
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Centered Modal -->
-        <div
-          class="modal fade"
-          id="centeredModal"
-          tabindex="-1"
-          aria-labelledby="centeredModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header text-center">
-                <h5 class="modal-title" id="centeredModalLabel">
-                  Centered Modal
-                </h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                ></button>
-              </div>
-              <div class="modal-body text-center">
-                This modal is vertically centered using This modal is vertically
-                centered using This modal is vertically centered using This
-                modal is vertically centered using
-                <code>modal-dialog-centered</code>.
-              </div>
-              <div class="modal-footer justify-content-center">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button type="button" class="btn btn-primary">
-                  Save changes
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Scrollable Modal -->
-        <div
-          class="modal fade"
-          id="scrollableModal"
-          tabindex="-1"
-          aria-labelledby="scrollableModalLabel"
-          aria-hidden="true"
-        >
-          <div
-            class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
-          >
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="scrollableModalLabel">
-                  Scrollable Modal
-                </h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <p>
-                  This modal allows scrolling within the body if the content
-                  exceeds viewport height.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Repellat, dignissimos...
-                </p>
-                <p>Repeat content to trigger scroll...</p>
-                <p>More scrolling content...</p>
-                <p>Keep adding more content...</p>
-                <p>Last item of scrollable content.</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Repellat, dignissimos...
-                </p>
-                <p>Repeat content to trigger scroll...</p>
-                <p>More scrolling content...</p>
-                <p>Keep adding more content...</p>
-                <p>Last item of scrollable content.</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Repellat, dignissimos...
-                </p>
-                <p>Repeat content to trigger scroll...</p>
-                <p>More scrolling content...</p>
-                <p>Keep adding more content...</p>
-                <p>Last item of scrollable content.</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Repellat, dignissimos...
-                </p>
-                <p>Repeat content to trigger scroll...</p>
-                <p>More scrolling content...</p>
-                <p>Keep adding more content...</p>
-                <p>Last item of scrollable content.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Large Modal -->
-        <div
-          class="modal fade"
-          id="largeModal"
-          tabindex="-1"
-          aria-labelledby="largeModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="largeModalLabel">Large Modal</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                ></button>
-              </div>
-              <div class="modal-body">
-                This is a large modal using <code>modal-lg</code>.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Small Modal -->
-        <div
-          class="modal fade"
-          id="smallModal"
-          tabindex="-1"
-          aria-labelledby="smallModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered modal-sm">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="smallModalLabel">Small Modal</h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                ></button>
-              </div>
-              <div class="modal-body">
-                This is a compact modal using <code>modal-sm</code>.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Profile Modal -->
-        <div
-          class="modal fade"
-          id="editProfileModal"
-          tabindex="-1"
-          aria-labelledby="editProfileModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content p-4">
-              <div class="modal-header border-0">
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <div class="text-center mb-4">
-                  <img
-                    src="https://i.pravatar.cc/100?img=1"
-                    alt="Profile"
-                    class="rounded-circle mb-3"
-                    width="120"
-                  />
-                  <h5 class="fw-bold mb-1">Ali Ahmed</h5>
-                  <p class="text-muted">Trainee</p>
-                </div>
-
-                <!-- Form -->
-                <form>
-                  <div class="row g-3">
-                    <!-- English / Arabic Names -->
-                    <div class="col-md-6">
-                      <label class="form-label">First Name (English)</label>
-                      <input type="text" class="form-control" value="Aster" />
-                    </div>
-                    <div class="col-md-6 text-end">
-                      <label class="form-label">الأول اسم (عربي)</label>
-                      <input
-                        type="text"
-                        class="form-control text-end"
-                        value="أستر"
-                      />
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label">Middle Name (English)</label>
-                      <input type="text" class="form-control" value="Zayd" />
-                    </div>
-                    <div class="col-md-6 text-end">
-                      <label class="form-label">وسط اسم (عربي)</label>
-                      <input
-                        type="text"
-                        class="form-control text-end"
-                        value="زيد"
-                      />
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label">Last Name (English)</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        value="Seawalker"
-                      />
-                    </div>
-                    <div class="col-md-6 text-end">
-                      <label class="form-label">الأخير اسم (عربي)</label>
-                      <input
-                        type="text"
-                        class="form-control text-end"
-                        value="سيووكر"
-                      />
-                    </div>
-
-                    <!-- Country & City -->
-                    <div class="col-md-6">
-                      <label class="form-label">Country</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        value="United Arab Emirates"
-                      />
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label">City</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        value="Abu Dhabi"
-                      />
-                    </div>
-
-                    <!-- ID & Email -->
-                    <div class="col-md-6">
-                      <label class="form-label">National ID</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        value="1234567890123"
-                      />
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label">Email</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        value="abc@xyz.com"
-                      />
-                    </div>
-
-                    <!-- Phone & Qualification -->
-                    <div class="col-md-6">
-                      <label class="form-label">Phone</label>
-                      <div class="input-group">
-                        <span class="input-group-text"
-                          ><img src="https://flagcdn.com/w40/sa.png" width="20"
-                        /></span>
-                        <input type="text" class="form-control" value="+966" />
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label">Qualification</label>
-                      <select class="form-select">
-                        <option selected>Choose</option>
-                        <option>Bachelor</option>
-                        <option>Master</option>
-                      </select>
-                    </div>
-
-                    <!-- Language & Gender -->
-                    <div class="col-md-6">
-                      <label class="form-label">Language</label>
-                      <select class="form-select">
-                        <option>English</option>
-                        <option>Arabic</option>
-                      </select>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label d-block"
-                        >Gender (Optional)</label
-                      >
-                      <div class="form-check form-check-inline">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="gender"
-                          id="male"
-                          value="male"
-                        />
-                        <label class="form-check-label" for="male">Male</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="gender"
-                          id="female"
-                          value="female"
-                          checked
-                        />
-                        <label class="form-check-label" for="female"
-                          >Female</label
-                        >
-                      </div>
-                    </div>
-
-                    <!-- Joining & Notes -->
-                    <div class="col-md-6">
-                      <label class="form-label">Joining</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        value="Jul 20, 25"
-                      />
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label">Notes (Optional)</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Name here"
-                      />
-                    </div>
-
-                    <!-- Course Enrollment -->
-                    <div class="col-6">
-                      <label class="form-label">Course Enrollment</label>
-                      <div class="p-3 border rounded bg-light">
-                        <p>
-                          Essentials of Internal Auditing – CIA1<br />
-                          Practice of Internal Auditing – CIA2<br />
-                          Business Knowledge for Internal Auditing – CIA3
-                        </p>
-                      </div>
-                    </div>
-                    <div class="col-6"></div>
-
-                    <!-- Alert -->
-                    <div class="col-6">
-                      <div
-                        class="alert alert-warning d-flex align-items-center mb-0 mt-3"
-                      >
-                        <i class="bi bi-exclamation-triangle mx-2"></i>
-                        <div class="lh-2">
-                          <strong>Important note:</strong> Course enrollment can
-                          be managed from course section.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Footer -->
-                  <div
-                    class="d-flex justify-content-center gap-6 align-items-center mt-8"
-                  >
-                    <button
-                      type="button"
-                      class="btn btn-outline-danger px-4"
-                      data-bs-dismiss="modal"
-                    >
-                      Discard Changes
-                    </button>
-                    <button type="submit" class="btn btn-primary px-4">
-                      Save Changes
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Form Components -->
       <section class="mb-8 pb-8 border-bottom">
         <h2 class="mb-5 text-primary">Form</h2>
@@ -1258,99 +367,152 @@
         </form>
       </section>
 
-      <section class="mb-8 pb-8 border-bottom">
-        <h2 class="mb-1 text-primary">Text grid</h2>
-        <p class="text-muted mb-5">Preview of text grid style.</p>
+      <!-- Tags -->
+      <div class="mb-3">
+        <p
+          class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-3 py-1 d-inline-block fw-semibold"
+        >
+          SPC
+        </p>
+        <p
+          class="w-auto rounded-1 px-3 py-1 d-inline-block fw-semibold"
+          style="
+            border: 1px solid #b2ddff;
+            background-color: #eff8ff;
+            color: #1849a9;
+          "
+        >
+          Arabic
+        </p>
+        <p
+          class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-3 py-1 d-inline-block fw-semibold"
+        >
+          Online
+        </p>
+      </div>
+      <!-- Card -->
+      <section class="mb-8 pb-8 border-bottom d-flex gap-4">
+        <!-- <div class=""> -->
+        <div class="row g-6">
+          <div class="col-md-4">
+            <div class="card p-4 rounded-4 gap-4">
+              <img
+                src="images/bg-course-item.svg"
+                class="card-img-top rounded-3"
+                alt="Article"
+              />
+              <div class="card-body d-flex flex-column gap-3">
+                <h5 class="card-title">
+                  Governance, Risk Management, and Compliance (GRC)
+                </h5>
+                <p class="card-text">Card content placeholder text goes here</p>
+                <!-- Tags -->
+                <div class="d-flex gap-2">
+                  <p
+                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                  >
+                    SPC
+                  </p>
+                  <p
+                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium"
+                    style="
+                      border: 1px solid #b2ddff;
+                      background-color: #eff8ff;
+                      color: #1849a9;
+                    "
+                  >
+                    Arabic
+                  </p>
+                  <p
+                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                  >
+                    Online
+                  </p>
+                </div>
+                <div class="d-flex flex-column gap-1">
+                  <!-- 4 filled stars -->
+                  <div>
+                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+                    <i class="bi bi-star-fill" style="color: #dba102"></i>
 
-        <div class="row row-cols-5 g-4 mb-10">
-          <div class="col">
-            <span>Online</span>
-            <p class="text-body-emphasis">Course format</p>
+                    <!-- 1 empty star (or use bi-star-half for a 4.5 rating) -->
+                    <i class="bi bi-star-fill" style="color: lightgray"></i>
+                  </div>
+                  <span class="text-muted small">12 reviews</span>
+                </div>
+                <a href="#" class="btn btn-primary" style="width: fit-content"
+                  >Subscribe Now</a
+                >
+              </div>
+            </div>
           </div>
-          <div class="col">
-            <span>Course type</span>
-            <p class="text-body-emphasis">CIA</p>
-          </div>
-          <div class="col">
-            <span>Course level</span>
-            <p class="text-body-emphasis">Beginner</p>
-          </div>
-          <div class="col">
-            <span>Schedule Days</span>
-            <p class="text-body-emphasis">Sunday To Thursday</p>
-          </div>
-          <div class="col">
-            <span>Schedule Time</span>
-            <p class="text-body-emphasis">9:00 AM To 9:30 AM</p>
-          </div>
+          <div class="col-md-4">
+            <div class="card p-4 rounded-4 gap-4">
+              <img
+                src="images/bg-article-1.svg"
+                class="card-img-top rounded-3"
+                alt="Article"
+              />
+              <div class="card-body d-flex flex-column gap-3">
+                <h5 class="card-title">Program Name</h5>
+                <p class="card-text">Card content placeholder text goes here</p>
+                <!-- Tags -->
+                <div class="d-flex gap-2">
+                  <p
+                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                  >
+                    Tag 1
+                  </p>
+                  <p
+                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium"
+                    style="
+                      border: 1px solid #b2ddff;
+                      background-color: #eff8ff;
+                      color: #1849a9;
+                    "
+                  >
+                    Tag 2
+                  </p>
+                  <p
+                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                  >
+                    Tag 3
+                  </p>
+                </div>
+                <div class="d-flex flex-column gap-1">
+                  <!-- 4 filled stars -->
+                  <div>
+                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+                    <i class="bi bi-star-fill" style="color: #dba102"></i>
 
-          <div class="col">
-            <span>Duration</span>
-            <p class="text-body-emphasis">6 Months</p>
-          </div>
-          <div class="col">
-            <span>Language</span>
-            <p class="text-body-emphasis">English</p>
-          </div>
-          <div class="col">
-            <span>Max Participants</span>
-            <p class="text-body-emphasis">50</p>
-          </div>
-          <div class="col">
-            <span>Exams Passing % (Optional)</span>
-            <p class="text-body-emphasis">70%</p>
-          </div>
-          <div class="col">
-            <span>Attendance Passing %</span>
-            <p class="text-body-emphasis">70%</p>
-          </div>
-
-          <div class="col">
-            <span>Base Price</span>
-            <p class="text-body-emphasis">SR: 500</p>
-          </div>
-          <div class="col">
-            <span>Disc. Price</span>
-            <p class="text-body-emphasis">SR: 300</p>
-          </div>
-          <div class="col">
-            <span>Trainer</span>
-            <p class="text-body-emphasis">Ahmed</p>
-          </div>
-          <div class="col">
-            <span>Supervisor</span>
-            <p class="text-body-emphasis">Ali</p>
-          </div>
-          <div class="col">
-            <span>Registrations</span>
-            <p class="text-body-emphasis">Open</p>
-          </div>
-
-          <div class="col">
-            <span>Accessible</span>
-            <p class="text-body-emphasis">Members only</p>
-          </div>
-          <div class="col">
-            <span>Upcoming class zoom link:</span>
-            <p class="text-body-emphasis">
-              Class 10: <a href="#">https://zoom.us/j/123</a>
-            </p>
-          </div>
-          <div class="col">
-            <span>Course Intro</span>
-            <p class="text-body-emphasis"><a href="#">YouTube Link</a></p>
-          </div>
-          <div class="col">
-            <span>Course Content</span>
-            <p class="text-body-emphasis">
-              <a href="#" download="">Download</a>
-            </p>
-          </div>
-          <div class="col">
-            <span>Course Status</span>
-            <p class="text-body-emphasis">Published</p>
+                    <!-- 1 empty star (or use bi-star-half for a 4.5 rating) -->
+                    <i class="bi bi-star-fill" style="color: lightgray"></i>
+                  </div>
+                  <span class="text-muted small">12 reviews</span>
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="btn btn-outline-light text-black"
+                    style="width: fit-content"
+                    >Details</a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn-primary ms-2"
+                    style="width: fit-content"
+                    >Subscribe Now</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <!-- </div> -->
       </section>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
