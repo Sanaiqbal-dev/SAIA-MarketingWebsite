@@ -577,43 +577,89 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero-section d-flex align-items-center mt-11">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7">
-            <h1 class="display-4 text-white fw-bold mb-4">
-              The Saudi Authority for Internal Auditors
-            </h1>
-            <p class="lead mb-4">
-              The Saudi Authority for Internal Auditors is an independent
-              professional body operating under the oversight of the General
-              Court of Audit.
-            </p>
-            <button class="btn btn-light">Know More</button>
-          </div>
-        </div>
-        <!-- Carousel Indicators -->
+    <section class="hero-section position-relative overflow-hidden">
+      <div class="hero-bg position-absolute top-0 start-0 w-100 h-100">
         <div
-          id="heroCarousel"
-          class="carousel slide position-absolute bottom-0 start-50 translate-middle-x mb-4"
+          id="carouselExampleIndicators"
+          class="carousel slide h-100"
+          data-bs-ride="carousel"
+          data-bs-interval="4000"
+          data-bs-pause="hover"
+          bis_skin_checked="1"
         >
-          <div class="carousel-indicators">
+          <div class="carousel-indicators" bis_skin_checked="1">
             <button
               type="button"
-              data-bs-target="#heroCarousel"
+              data-bs-target="#carouselExampleIndicators"
               data-bs-slide-to="0"
-              class="active"
+              class=""
+              aria-label="Slide 1"
             ></button>
             <button
               type="button"
-              data-bs-target="#heroCarousel"
+              data-bs-target="#carouselExampleIndicators"
               data-bs-slide-to="1"
+              aria-label="Slide 2"
+              class="active"
+              aria-current="true"
             ></button>
             <button
               type="button"
-              data-bs-target="#heroCarousel"
+              data-bs-target="#carouselExampleIndicators"
               data-bs-slide-to="2"
+              aria-label="Slide 3"
+              class=""
             ></button>
+          </div>
+          <div
+            class="carousel-inner py-20 px-20 d-flex align-items-center"
+            bis_skin_checked="1"
+          >
+            <div class="carousel-item" bis_skin_checked="1">
+              <div class="container">
+                <div class="col-lg-8">
+                  <h1 class="display-4 text-white fw-bold mb-4">
+                    The Saudi Authority for Internal Auditors
+                  </h1>
+                  <p class="lead mb-4">
+                    The Saudi Authority for Internal Auditors is an independent
+                    professional body operating under the oversight of the
+                    General Court of Audit.
+                  </p>
+                  <button class="btn btn-light">Know More</button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item active" bis_skin_checked="1">
+              <div class="container">
+                <div class="col-lg-8">
+                  <h1 class="display-4 text-white fw-bold mb-4">
+                    The Saudi Authority for Internal Auditors
+                  </h1>
+                  <p class="lead mb-4">
+                    The Saudi Authority for Internal Auditors is an independent
+                    professional body operating under the oversight of the
+                    General Court of Audit.
+                  </p>
+                  <button class="btn btn-light">Know More</button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" bis_skin_checked="1">
+              <div class="container">
+                <div class="col-lg-8">
+                  <h1 class="display-4 text-white fw-bold mb-4">
+                    The Saudi Authority for Internal Auditors
+                  </h1>
+                  <p class="lead mb-4">
+                    The Saudi Authority for Internal Auditors is an independent
+                    professional body operating under the oversight of the
+                    General Court of Audit.
+                  </p>
+                  <button class="btn btn-light">Know More</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
