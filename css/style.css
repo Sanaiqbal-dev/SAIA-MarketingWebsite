@@ -19484,4 +19484,39 @@ body {
 .serviceCarousel .swiper-pagination-bullet-active {
   background-color: var(--bs-primary) !important;
   opacity: 1;
+}
+
+.has-partial-bg {
+  position: relative;
+  z-index: 1;
+}
+.has-partial-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 380px;
+  background: #f7fdf9;
+  z-index: 0;
+}
+
+.accordion-item {
+  border: none !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: black !important;
+  background-color: #fff !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:hover {
+  background-color: var(--bs-light) !important;
+}
+
+.accordion-item:first-of-type > .accordion-header .accordion-button,
+.accordion-item:last-of-type > .accordion-header .accordion-button {
+  border-radius: 0 !important;
 }/*# sourceMappingURL=style.css.map */

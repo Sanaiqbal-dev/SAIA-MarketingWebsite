@@ -69,3 +69,37 @@ document.addEventListener("click", (e) => {
     searchDropdown.style.display = "none";
   }
 });
+// Add hover + active styles
+const links = document.querySelectorAll("#sideNav .nav-link");
+links.forEach((link) => {
+  link.addEventListener("mouseenter", () => {
+    link.style.borderLeft = "3px solid #198754";
+    link.style.backgroundColor = "#f8f9fa";
+  });
+  link.addEventListener("mouseleave", () => {
+    if (!link.classList.contains("active")) {
+      link.style.borderLeft = "3px solid transparent";
+      link.style.backgroundColor = "transparent";
+    }
+  });
+  link.addEventListener("click", () => {
+    links.forEach((l) => {
+      l.classList.remove("active");
+      l.style.borderLeft = "3px solid transparent";
+      l.style.fontWeight = "normal";
+    });
+    link.classList.add("active");
+    link.style.borderLeft = "3px solid #198754";
+    link.style.fontWeight = "600";
+  });
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});

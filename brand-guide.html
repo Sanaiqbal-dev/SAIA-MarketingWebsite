@@ -623,6 +623,94 @@
               </div>
             </div>
           </div>
+
+          <div class="row mt-4">
+            <!-- Information Bar -->
+            <div
+              class="alert alert-dismissible fade show m-0 rounded-0 border-0 border-bottom border-4 d-flex justify-content-between align-items-center px-8 py-2"
+              style="
+                border-color: #1570ef !important;
+                background-color: #eff8ff;
+              "
+              role="alert"
+              id="infoBar"
+            >
+              <div class="d-flex align-items-center flex-grow-1">
+                <span
+                  class="badge rounded-circle d-flex align-items-center justify-content-center me-2"
+                  style="width: 24px; height: 24px; background-color: #175cd3"
+                >
+                  <small>i</small>
+                </span>
+                <div style="color: #175cd3">
+                  <strong>Important:</strong> You can visit the LMS for
+                  assessments and classes.
+                </div>
+              </div>
+              <a
+                href="#"
+                class="btn btn-emphasis px-4 py-1 me-4"
+                data-bs-dismiss="alert"
+              >
+                <i class="bi bi-arrow-right text-white me-2"></i>Go To LMS
+              </a>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+              ></button>
+            </div>
+          </div>
+
+
+           <button
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#paymentModal"
+            >
+              Show Payment Modal
+            </button>
+           <!-- Payment Modal -->
+    <div
+      class="modal fade"
+      id="paymentModal"
+      tabindex="-1"
+      aria-labelledby="paymentModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4">
+          <div class="modal-header">
+            <h5 class="modal-title" id="basicModalLabel">
+              <i class="bi bi-check-circle-fill text-primary me-2"></i>Payment Successful
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Payment successful! You can now head over to the Learning Management
+            System (LMS) or choose to stay on the website. Your choice!
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary w-100"
+              data-bs-dismiss="modal"
+            >
+              Go to LMS
+            </button>
+            <button type="button" class="btn btn-outline-border w-100">
+              Stay on Website
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
         </div>
         <!-- </div> -->
       </section>
