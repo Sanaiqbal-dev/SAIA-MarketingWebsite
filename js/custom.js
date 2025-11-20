@@ -49,26 +49,35 @@ var swiper = new Swiper(".partnerSwiper", {
     disableOnInteraction: false,
   },
 });
-const searchToggle = document.querySelector(".action-menu .bi-search");
-const searchDropdown = document.getElementById("searchDropdown");
 
-if (searchToggle && searchDropdown) {
-  searchToggle.closest("a").addEventListener("click", (e) => {
+document.querySelectorAll(".search-trigger").forEach((btn) => {
+  btn.addEventListener("click", function (e) {
     e.preventDefault();
-    const isVisible = searchDropdown.style.display === "block";
-    searchDropdown.style.display = isVisible ? "none" : "block";
-  });
-}
 
-// Optional: hide dropdown when clicking outside
+    const searchDropdown = document.getElementById("searchDropdown");
+
+    // Close offcanvas if open
+    const offcanvas = bootstrap.Offcanvas.getInstance(
+      document.getElementById("offcanvasNav")
+    );
+    if (offcanvas) offcanvas.hide();
+
+    // Toggle the search dropdown
+    searchDropdown.style.display =
+      searchDropdown.style.display === "block" ? "none" : "block";
+  });
+});
+
 document.addEventListener("click", (e) => {
+  // If click is NOT inside search triggers AND NOT inside the dropdown
   if (
-    !e.target.closest(".action-menu") &&
+    !e.target.closest(".search-trigger") &&
     !e.target.closest("#searchDropdown")
   ) {
     searchDropdown.style.display = "none";
   }
 });
+
 // Add hover + active styles
 const links = document.querySelectorAll("#sideNav .nav-link");
 links.forEach((link) => {
