@@ -373,15 +373,22 @@ body {
   align-items: center;
   gap: 16px;
 }
-.sitemap a{
+.sitemap a {
   color: var(--bs-primary);
   text-decoration: none;
 }
-.sitemap ul, .sitemap a{
+.sitemap ul,
+.sitemap a {
   margin-bottom: 16px;
 }
-.e-policy-content p{
+.e-policy-content p {
   font-size: 14px;
   line-height: 20px;
   padding: 0px !important;
+}
+.feedback-panel {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 6px;
 }

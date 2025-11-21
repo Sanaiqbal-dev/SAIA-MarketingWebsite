@@ -26,27 +26,109 @@
   </head>
   <body>
     <!-- Top Bar -->
-    <div class="bg-light py-2">
-      <div class="d-flex px-5">
-        <img
-          src="../../images/ic-flag.svg"
-          alt="Saudi Flag"
-          class="me-2"
-          style="width: 24px; height: 24px"
-        />
-        <small class="text-black"
-          >A government website registered with the Digital Government
-          Authority.</small
-        >
-        <a
-          class="text-primary hover:text-secondary ms-2 hover:cursor-pointer text-decoration-none"
-          >How do you know?</a
-        >
+    <div class="bg-light">
+      <div class="container-fluid px-8">
+        <!-- Main Bar -->
+        <div class="d-flex align-items-center py-2">
+          <img
+            src="../../images/ic-flag.svg"
+            alt="Saudi Flag"
+            class="me-2"
+            width="24"
+            height="24"
+            loading="lazy"
+          />
+          <small class="text-black"
+            >A government website registered with the Digital Government
+            Authority.</small
+          >
+          <a
+            class="text-primary ms-2 text-decoration-none"
+            role="button"
+            id="togglePopup"
+            onclick="togglePopup()"
+          >
+            How do you know?
+            <i class="fas fa-chevron-down ms-1 small" id="chevronIcon"></i>
+          </a>
+        </div>
+
+        <!-- Expanded Popup Section -->
+        <div class="collapse py-8" id="popupSection">
+          <div class="row g-10">
+            <!-- Left Column -->
+            <div class="col-md-6 d-flex align-items-start mb-3 mb-md-0">
+              <img
+                src="../../images/ic-featured-delivery.svg"
+                alt="Gov.sa"
+                class="me-3"
+                width="48"
+                height="48"
+                loading="lazy"
+              />
+              <div>
+                <p class="mb-1 fw-semibold fs-5">
+                  Official Saudi Government website URL ends with
+                  <span class="text-primary">.gov.sa</span>
+                </p>
+                <small class="text-muted fs-6"
+                  >Website belongs to an official government organization in the
+                  Kingdom of Saudi Arabia always ends with .gov.sa .</small
+                >
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-md-6 d-flex align-items-start">
+              <img
+                src="../../images/ic-featured-delivery.svg"
+                alt="Gov.sa"
+                class="me-3"
+                width="48"
+                height="48"
+                loading="lazy"
+              />
+              <div>
+                <p class="mb-1 fw-semibold fs-5">
+                  Official Secure websites use
+                  <span class="text-primary">HTTPS</span>
+                </p>
+                <small class="text-muted fs-6"
+                  >Secured governments websites in the Kingdom of Saudi Arabia
+                  use Https encryption.</small
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Registration Info -->
+          <div
+            class="d-flex align-items-center mt-8 py-2 px-4 bg-white rounded border-0"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              class="me-3 text-primary"
+            >
+              <path
+                fill="currentColor"
+                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12c5.16-1.26 9-6.45 9-12V5l-9-4m0 4l4 2v4l-4 2l-4-2V7l4-2m0 1.5L9 8v2.5l3 1.5l3-1.5V8l-3-1.5"
+              />
+            </svg>
+            <span class="text-muted"
+              >Registered on Digital Government Authority:</span
+            >
+            <a href="#" class="text-primary ms-2 text-decoration-none"
+              >20230103200</a
+            >
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Navbar -->
-     <!-- Navbar -->
     <nav class="navbar navbar-light bg-white sticky-top">
       <div class="container-fluid px-5">
         <div class="d-flex align-items-center gap-10">
@@ -67,7 +149,7 @@
                   <div class="row">
                     <div class="col-md-3">
                       <a href="aboutUs.html" class="text-decoration-none">
-                        <h6 class="text-success fw-bold mb-3">
+                        <h6 class="text-primary fw-bold mb-3">
                           About Authority
                         </h6></a
                       >
@@ -77,7 +159,7 @@
                         href="boardOfDirectors.html"
                         class="text-decoration-none"
                       >
-                        <h6 class="text-success fw-bold mb-3">
+                        <h6 class="text-primary fw-bold mb-3">
                           Board of Directors
                         </h6></a
                       >
@@ -94,7 +176,7 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-md-3">
-                      <h6 class="text-success fw-bold mb-3">
+                      <h6 class="text-primary fw-bold mb-3">
                         Courses and training
                       </h6>
                       <ul class="list-unstyled">
@@ -122,7 +204,7 @@
                       </ul>
                     </div>
                     <div class="col-md-3">
-                      <h6 class="text-success fw-bold mb-3">Programs</h6>
+                      <h6 class="text-primary fw-bold mb-3">Programs</h6>
                       <ul class="list-unstyled">
                         <li class="mb-2">
                           <a
@@ -141,7 +223,7 @@
                       </ul>
                     </div>
                     <div class="col-md-3">
-                      <h6 class="text-success fw-bold mb-3">Events</h6>
+                      <h6 class="text-primary fw-bold mb-3">Events</h6>
                       <ul class="list-unstyled">
                         <li class="mb-2">
                           <a
@@ -153,7 +235,7 @@
                       </ul>
                     </div>
                     <div class="col-md-3">
-                      <h6 class="text-success fw-bold mb-3">Conferences</h6>
+                      <h6 class="text-primary fw-bold mb-3">Conferences</h6>
                       <ul class="list-unstyled">
                         <li class="mb-2">
                           <a
@@ -176,7 +258,7 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-md-3">
-                      <h6 class="text-success fw-bold mb-3">Individuals</h6>
+                      <h6 class="text-primary fw-bold mb-3">Individuals</h6>
                       <ul class="list-unstyled">
                         <li class="mb-2">
                           <a
@@ -188,7 +270,7 @@
                       </ul>
                     </div>
                     <div class="col-md-3">
-                      <h6 class="text-success fw-bold mb-3">Corporate</h6>
+                      <h6 class="text-primary fw-bold mb-3">Corporate</h6>
                       <ul class="list-unstyled">
                         <li class="mb-2">
                           <a
@@ -214,7 +296,7 @@
                       </ul>
                     </div>
                     <div class="col-md-3">
-                      <h6 class="text-success fw-bold mb-3">Student</h6>
+                      <h6 class="text-primary fw-bold mb-3">Student</h6>
                       <ul class="list-unstyled">
                         <li class="mb-2">
                           <a
@@ -241,26 +323,26 @@
                   <div class="row">
                     <div class="col-md-3">
                       <a href="contactUs.html" class="text-decoration-none"
-                        ><h6 class="text-success fw-bold mb-3">Inquiry</h6></a
+                        ><h6 class="text-primary fw-bold mb-3">Inquiry</h6></a
                       >
                     </div>
                     <div class="col-md-3">
                       <a href="contactUs.html" class="text-decoration-none"
-                        ><h6 class="text-success fw-bold mb-3">
+                        ><h6 class="text-primary fw-bold mb-3">
                           Lodge a Complain
                         </h6></a
                       >
                     </div>
                     <div class="col-md-3">
                       <a href="socialMedia.html" class="text-decoration-none"
-                        ><h6 class="text-success fw-bold mb-3">
+                        ><h6 class="text-primary fw-bold mb-3">
                           Social Media
                         </h6></a
                       >
                     </div>
                     <div class="col-md-3">
                       <a href="faqs.html" class="text-decoration-none"
-                        ><h6 class="text-success fw-bold mb-3">FAQs</h6></a
+                        ><h6 class="text-primary fw-bold mb-3">FAQs</h6></a
                       >
                     </div>
                   </div>
@@ -310,7 +392,7 @@
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button class="btn btn-success" type="button">Search</button>
+              <button class="btn btn-primary" type="button">Search</button>
             </div>
             <div class="mt-8">
               <h6 class="text-primary fw-semibold mb-2">Suggestions for you</h6>
@@ -381,14 +463,14 @@
                 <div class="row">
                   <div class="col-6">
                     <a href="aboutUs.html" class="text-decoration-none"
-                      ><h6 class="text-success fw-bold mb-2">
+                      ><h6 class="text-primary fw-bold mb-2">
                         About Authority
                       </h6></a
                     >
                   </div>
                   <div class="col-6">
                     <a href="boardOfDirectors.html" class="text-decoration-none"
-                      ><h6 class="text-success fw-bold mb-2">
+                      ><h6 class="text-primary fw-bold mb-2">
                         Board of Directors
                       </h6>
                     </a>
@@ -413,7 +495,7 @@
               <div class="p-3 bg-light">
                 <div class="row">
                   <div class="col-6">
-                    <h6 class="text-success fw-bold mb-2">
+                    <h6 class="text-primary fw-bold mb-2">
                       Courses &amp; training
                     </h6>
                     <ul class="list-unstyled small">
@@ -441,7 +523,7 @@
                     </ul>
                   </div>
                   <div class="col-6">
-                    <h6 class="text-success fw-bold mb-2">Programs</h6>
+                    <h6 class="text-primary fw-bold mb-2">Programs</h6>
                     <ul class="list-unstyled small">
                       <li class="mb-1">
                         <a
@@ -460,7 +542,7 @@
                     </ul>
                   </div>
                   <div class="col-6">
-                    <h6 class="text-success fw-bold mb-2">Events</h6>
+                    <h6 class="text-primary fw-bold mb-2">Events</h6>
                     <ul class="list-unstyled small">
                       <li class="mb-1">
                         <a
@@ -472,7 +554,7 @@
                     </ul>
                   </div>
                   <div class="col-6">
-                    <h6 class="text-success fw-bold mb-2">Conferences</h6>
+                    <h6 class="text-primary fw-bold mb-2">Conferences</h6>
                     <ul class="list-unstyled small">
                       <li class="mb-1">
                         <a
@@ -503,7 +585,7 @@
               <div class="p-3 bg-light">
                 <div class="row">
                   <div class="col-6">
-                    <h6 class="text-success fw-bold mb-2">Individuals</h6>
+                    <h6 class="text-primary fw-bold mb-2">Individuals</h6>
                     <ul class="list-unstyled small">
                       <li class="mb-1">
                         <a
@@ -515,7 +597,7 @@
                     </ul>
                   </div>
                   <div class="col-6">
-                    <h6 class="text-success fw-bold mb-2">Corporate</h6>
+                    <h6 class="text-primary fw-bold mb-2">Corporate</h6>
                     <ul class="list-unstyled small">
                       <li class="mb-1">
                         <a
@@ -541,7 +623,7 @@
                     </ul>
                   </div>
                   <div class="col-6">
-                    <h6 class="text-success fw-bold mb-2">Student</h6>
+                    <h6 class="text-primary fw-bold mb-2">Student</h6>
                     <ul class="list-unstyled small">
                       <li class="mb-1">
                         <a
@@ -578,24 +660,24 @@
                 <div class="row">
                   <div class="col-6">
                     <a href="contactUs.html" class="text-decoration-none">
-                      <h6 class="text-success fw-bold mb-2">Inquiry</h6></a
+                      <h6 class="text-primary fw-bold mb-2">Inquiry</h6></a
                     >
                   </div>
                   <div class="col-6">
                     <a href="contactUs.html" class="text-decoration-none">
-                      <h6 class="text-success fw-bold mb-2">
+                      <h6 class="text-primary fw-bold mb-2">
                         Lodge a Complain
                       </h6></a
                     >
                   </div>
                   <div class="col-6">
                     <a href="socialMedia.html" class="text-decoration-none">
-                      <h6 class="text-success fw-bold mb-2">Social Media</h6></a
+                      <h6 class="text-primary fw-bold mb-2">Social Media</h6></a
                     >
                   </div>
                   <div class="col-6">
                     <a href="faqs.html" class="text-decoration-none">
-                      <h6 class="text-success fw-bold mb-2">FAQs</h6></a
+                      <h6 class="text-primary fw-bold mb-2">FAQs</h6></a
                     >
                   </div>
                 </div>
@@ -680,7 +762,9 @@
               style="--bs-breadcrumb-divider: '›'"
             >
               <li class="breadcrumb-item">
-                <a href="homepage.html" class="text-dark text-decoration-none">Home</a>
+                <a href="homepage.html" class="text-dark text-decoration-none"
+                  >Home</a
+                >
               </li>
 
               <li class="breadcrumb-item active" aria-current="page">Cart</li>
@@ -910,7 +994,7 @@
             <!-- FAQ -->
             <div class="my-4">
               <h6 class="fw-semibold mb-2">Frequently Asked Questions</h6>
-              <a href="#" class="small text-success text-decoration-none">
+              <a href="#" class="small text-primary text-decoration-none">
                 Internal audit-FAQ's-page
                 <i class="bi bi-box-arrow-up-right ms-1"></i>
               </a>
@@ -918,25 +1002,25 @@
 
             <!-- Phone -->
             <div class="mb-4">
-              <i class="bi bi-telephone text-success me-2"></i>
+              <i class="bi bi-telephone text-primary me-2"></i>
               <a
                 href="tel:9200343222"
                 class="text-decoration-none small text-dark"
               >
                 9200343222
-                <i class="bi bi-box-arrow-up-right text-success ms-1"></i>
+                <i class="bi bi-box-arrow-up-right text-primary ms-1"></i>
               </a>
             </div>
 
             <!-- Email -->
             <div class="mb-4">
-              <i class="bi bi-envelope text-success me-2"></i>
+              <i class="bi bi-envelope text-primary me-2"></i>
               <a
                 href="mailto:help@saia.sa"
                 class="text-decoration-none small text-dark"
               >
                 help@saia.sa
-                <i class="bi bi-box-arrow-up-right text-success ms-1"></i>
+                <i class="bi bi-box-arrow-up-right text-primary ms-1"></i>
               </a>
             </div>
 
@@ -991,7 +1075,7 @@
                 <!-- Tags -->
                 <div class="d-flex gap-2">
                   <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                    class="border-primary-subtle bg-primary-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
                   >
                     SPC
                   </p>
@@ -1019,7 +1103,10 @@
                   </div>
                   <span class="text-muted small">12 reviews</span>
                 </div>
-                <a href="coursePage.html" class="btn btn-primary" style="width: fit-content"
+                <a
+                  href="coursePage.html"
+                  class="btn btn-primary"
+                  style="width: fit-content"
                   >Add to cart</a
                 >
               </div>
@@ -1040,7 +1127,7 @@
                 <!-- Tags -->
                 <div class="d-flex gap-2">
                   <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                    class="border-primary-subtle bg-primary-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
                   >
                     SPC
                   </p>
@@ -1068,7 +1155,10 @@
                   </div>
                   <span class="text-muted small">12 reviews</span>
                 </div>
-                <a href="coursePage.html" class="btn btn-primary" style="width: fit-content"
+                <a
+                  href="coursePage.html"
+                  class="btn btn-primary"
+                  style="width: fit-content"
                   >Add to cart</a
                 >
               </div>
@@ -1089,7 +1179,7 @@
                 <!-- Tags -->
                 <div class="d-flex gap-2">
                   <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                    class="border-primary-subtle bg-primary-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
                   >
                     SPC
                   </p>
@@ -1117,7 +1207,10 @@
                   </div>
                   <span class="text-muted small">12 reviews</span>
                 </div>
-                <a href="coursePage.html" class="btn btn-primary" style="width: fit-content"
+                <a
+                  href="coursePage.html"
+                  class="btn btn-primary"
+                  style="width: fit-content"
                   >Add to cart</a
                 >
               </div>
@@ -1138,7 +1231,7 @@
                 <!-- Tags -->
                 <div class="d-flex gap-2">
                   <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                    class="border-primary-subtle bg-primary-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
                   >
                     SPC
                   </p>
@@ -1166,7 +1259,10 @@
                   </div>
                   <span class="text-muted small">12 reviews</span>
                 </div>
-                <a href="coursePage.html" class="btn btn-primary" style="width: fit-content"
+                <a
+                  href="coursePage.html"
+                  class="btn btn-primary"
+                  style="width: fit-content"
                   >Add to cart</a
                 >
               </div>
@@ -1187,7 +1283,7 @@
                 <!-- Tags -->
                 <div class="d-flex gap-2">
                   <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                    class="border-primary-subtle bg-primary-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
                   >
                     SPC
                   </p>
@@ -1215,7 +1311,10 @@
                   </div>
                   <span class="text-muted small">12 reviews</span>
                 </div>
-                <a href="coursePage.html" class="btn btn-primary" style="width: fit-content"
+                <a
+                  href="coursePage.html"
+                  class="btn btn-primary"
+                  style="width: fit-content"
                   >Add to cart</a
                 >
               </div>
@@ -1236,7 +1335,7 @@
                 <!-- Tags -->
                 <div class="d-flex gap-2">
                   <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                    class="border-primary-subtle bg-primary-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
                   >
                     SPC
                   </p>
@@ -1264,7 +1363,10 @@
                   </div>
                   <span class="text-muted small">12 reviews</span>
                 </div>
-                <a href="coursePage.html" class="btn btn-primary" style="width: fit-content"
+                <a
+                  href="coursePage.html"
+                  class="btn btn-primary"
+                  style="width: fit-content"
                   >Add to cart</a
                 >
               </div>
@@ -1297,52 +1399,319 @@
 
     <!-- Rating Section -->
     <section class="border-top border-3 border-primary py-4">
-      <div
-        class="container d-flex flex-column flex-md-row align-items-center justify-content-between"
-      >
-        <!-- Left: Question and Buttons -->
-        <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
-          <span class="fw-semibold"
-            >This service is rated with an average of</span
-          >
-          <span class="fw-bold">3.9</span>
-          <div>
-            <i class="bi bi-star-fill text-primary"></i>
-            <i class="bi bi-star-fill text-primary"></i>
-            <i class="bi bi-star-fill text-primary"></i>
-            <i class="bi bi-star-fill text-primary"></i>
-
-            <!-- 1 empty star (or use bi-star-half for a 4.5 rating) -->
-            <i class="bi bi-star-fill" style="color: lightgray"></i>
+      <div class="container">
+        <!-- Collapsed State (always visible) -->
+        <div
+          id="ratingCollapsed"
+          class="d-flex flex-column flex-md-row align-items-center justify-content-between"
+          style="transition: opacity 0.3s ease"
+        >
+          <div class="d-flex align-items-center gap-4 mb-4 mb-md-0">
+            <span
+              >This service is rated with an average of
+              <strong>3.9</strong></span
+            >
+            <div class="d-flex align-items-center">
+              <i class="bi bi-star-fill text-primary fs-5"></i>
+              <i class="bi bi-star-fill text-primary fs-5"></i>
+              <i class="bi bi-star-fill text-primary fs-5"></i>
+              <i class="bi bi-star-fill text-primary fs-5"></i>
+              <i class="bi bi-star text-primary fs-5"></i>
+            </div>
+            <small class="text-muted">1544 reviews</small>
           </div>
-          <span class="text-muted small">1544 reviews</span>
+
+          <button class="btn btn-primary" id="openRatingBtn">
+            Rate this service
+          </button>
         </div>
 
-        <!-- Right: Feedback Stats -->
-        <a class="btn btn-primary"> Rate this service </a>
+        <!-- Expanded State – Bootstrap Collapse (THIS IS THE IMPORTANT PART) -->
+        <div class="collapse" id="ratingExpanded">
+          <div class="pt-4">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <div>
+                <h6 class="fw-bold mb-1">
+                  Tell us what you think of this service
+                </h6>
+                <small class="text-muted">
+                  Please don't include personal or financial information. Your
+                  review will be submitted and recorded to improve services.
+                </small>
+              </div>
+              <button
+                class="btn btn-light text-dark text-decoration-none fw-semibold"
+                onclick="closeRating()"
+              >
+                Close <i class="bi bi-x-circle ms-1"></i>
+              </button>
+            </div>
+
+            <div class="row mt-4">
+              <!-- Stars -->
+              <div class="col-md-6">
+                <p class="fw-semibold mb-1">How would you rate this service?</p>
+                <small class="text-muted"
+                  >Rate your experience from (1) poor to (5) excellent</small
+                >
+
+                <div
+                  class="d-flex align-items-center mt-3 mb-4"
+                  id="starRating"
+                >
+                  <i
+                    class="bi bi-star fs-3 text-secondary me-1"
+                    data-rating="1"
+                    onclick="setRating(1)"
+                    onmouseover="hoverRating(1)"
+                    onmouseout="resetHover()"
+                  ></i>
+                  <i
+                    class="bi bi-star fs-3 text-secondary me-1"
+                    data-rating="2"
+                    onclick="setRating(2)"
+                    onmouseover="hoverRating(2)"
+                    onmouseout="resetHover()"
+                  ></i>
+                  <i
+                    class="bi bi-star fs-3 text-secondary me-1"
+                    data-rating="3"
+                    onclick="setRating(3)"
+                    onmouseover="hoverRating(3)"
+                    onmouseout="resetHover()"
+                  ></i>
+                  <i
+                    class="bi bi-star fs-3 text-secondary me-1"
+                    data-rating="4"
+                    onclick="setRating(4)"
+                    onmouseover="hoverRating(4)"
+                    onmouseout="resetHover()"
+                  ></i>
+                  <i
+                    class="bi bi-star fs-3 text-secondary me-1"
+                    data-rating="5"
+                    onclick="setRating(5)"
+                    onmouseover="hoverRating(5)"
+                    onmouseout="resetHover()"
+                  ></i>
+                </div>
+
+                <div class="mt-4">
+                  <small
+                    >For more information you may review
+                    <a href="#" class="link-primary"
+                      >e-participation statement</a
+                    >
+                    and
+                    <a href="#" class="link-primary">rules of engagement.</a>
+                  </small>
+                </div>
+              </div>
+
+              <!-- Textarea + Submit -->
+              <div
+                class="col-md-6 mt-4 mt-md-0 d-flex flex-column justify-content-between"
+              >
+                <div>
+                  <label for="ratingFeedbackText" class="form-label fw-semibold"
+                    >Feedback</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="ratingFeedbackText"
+                    rows="4"
+                    placeholder="Entered text"
+                  ></textarea>
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                  <button class="btn btn-primary" onclick="submitRating()">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Feedback Section -->
     <section class="border-top border-3 border-primary py-4">
-      <div
-        class="container d-flex flex-column flex-md-row align-items-center justify-content-between"
-      >
-        <!-- Left: Question and Buttons -->
-        <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
-          <span class="fw-semibold">Was this page useful?</span>
-          <button class="btn btn-primary w-auto">Yes</button>
-          <button class="btn btn-primary w-auto">No</button>
+      <div class="container">
+        <!-- Main Row -->
+        <div
+          class="d-flex flex-column flex-md-row align-items-center justify-content-between"
+        >
+          <!-- Left: Question and Buttons -->
+          <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+            <span class="fw-semibold">Was this page useful?</span>
+            <button
+              class="btn btn-primary"
+              id="btnYes"
+              onclick="toggleFeedback('yes')"
+            >
+              Yes
+            </button>
+            <button
+              class="btn btn-primary"
+              id="btnNo"
+              onclick="toggleFeedback('no')"
+            >
+              No
+            </button>
+          </div>
+          <!-- Right: Feedback Stats -->
+          <small id="feedbackStats" class="text-muted">
+            60% of users said Yes from 2843 Feedbacks
+          </small>
+          <!-- CLOSE BUTTON (top right) -->
+          <!-- <div class="text-end mb-2"> -->
+          <button
+            id="closeFeedbackBtn"
+            class="d-none btn btn-light text-dark fw-semibold"
+            onclick="closeFeedback()"
+          >
+            Close<i class="bi bi-x-circle ms-2"></i>
+          </button>
+          <!-- </div> -->
         </div>
 
-        <!-- Right: Feedback Stats -->
-        <small class="text-muted">
-          60% of users said Yes from 2843 Feedbacks
-        </small>
+        <!-- Expanded Feedback Section -->
+        <div class="collapse pt-4" id="feedbackExpanded">
+          <div class="row">
+            <!-- Left Column: Options -->
+            <div class="col-md-6">
+              <div
+                class="d-flex justify-content-between align-items-start mb-3"
+              >
+                <p class="mb-0 fw-semibold">
+                  Please tell us why
+                  <span class="fw-normal text-muted"
+                    >(you can select multiple options)</span
+                  >
+                </p>
+              </div>
+
+              <!-- Yes Options -->
+              <div id="yesOptions" class="d-none">
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" id="opt1" />
+                  <label class="form-check-label" for="opt1"
+                    >Content is relevant</label
+                  >
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" id="opt2" />
+                  <label class="form-check-label" for="opt2"
+                    >It was well written</label
+                  >
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" id="opt3" />
+                  <label class="form-check-label" for="opt3"
+                    >The layout made it easy to read</label
+                  >
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" id="opt4" />
+                  <label class="form-check-label" for="opt4"
+                    >Something else</label
+                  >
+                </div>
+              </div>
+
+              <!-- No Options -->
+              <div id="noOptions" class="d-none">
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" id="optNo1" />
+                  <label class="form-check-label" for="optNo1"
+                    >Content is not relevant</label
+                  >
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" id="optNo2" />
+                  <label class="form-check-label" for="optNo2"
+                    >Content is not accurate</label
+                  >
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" id="optNo3" />
+                  <label class="form-check-label" for="optNo3"
+                    >Content is too long</label
+                  >
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" id="optNo4" />
+                  <label class="form-check-label" for="optNo4"
+                    >Something else</label
+                  >
+                </div>
+              </div>
+
+              <!-- Gender Selection -->
+              <div class="mt-4">
+                <span class="fw-semibold me-3">I'm</span>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    id="male"
+                  />
+                  <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    id="female"
+                  />
+                  <label class="form-check-label" for="female">Female</label>
+                </div>
+              </div>
+
+              <!-- Info Links -->
+              <div class="mt-4">
+                <small
+                  >For more information you may review
+                  <a href="#" class="link-primary">e-participation statement</a>
+                  and
+                  <a href="#" class="link-primary"
+                    >rules of engagement.</a
+                  ></small
+                >
+              </div>
+            </div>
+
+            <!-- Right Column: Feedback Textarea -->
+            <div
+              class="col-md-6 mt-4 mt-md-0 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <label for="feedbackText" class="form-label fw-semibold"
+                  >Feedback</label
+                >
+                <textarea
+                  class="form-control"
+                  id="feedbackText"
+                  rows="4"
+                  placeholder="Entered text"
+                ></textarea>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button class="btn btn-primary" onclick="submitFeedback()">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-secondary py-5 text-white">
       <div class="container px-5 d-flex flex-column gap-12">
         <div class="row g-4">
@@ -1352,7 +1721,9 @@
             <hr />
             <ul class="list-unstyled">
               <li class="mb-2">
-                <a href="aboutUs.html" class="text-white text-decoration-none small"
+                <a
+                  href="aboutUs.html"
+                  class="text-white text-decoration-none small"
                   >About SAIA</a
                 >
               </li>
@@ -1362,7 +1733,9 @@
                 >
               </li>
               <li class="mb-2">
-                <a href="newsArticles.html" class="text-white text-decoration-none small"
+                <a
+                  href="newsArticles.html"
+                  class="text-white text-decoration-none small"
                   >News and events</a
                 >
               </li>
@@ -1385,7 +1758,9 @@
                 >
               </li>
               <li class="mb-2">
-                <a href="eParticipation.html" class="text-white text-decoration-none small"
+                <a
+                  href="eParticipation.html"
+                  class="text-white text-decoration-none small"
                   >E-Participation portal</a
                 >
               </li>
@@ -1398,22 +1773,30 @@
             <hr />
             <ul class="list-unstyled">
               <li class="mb-2">
-                <a href="contactUs.html" class="text-white text-decoration-none small"
+                <a
+                  href="contactUs.html"
+                  class="text-white text-decoration-none small"
                   >Contact us</a
                 >
               </li>
               <li class="mb-2">
-                <a href="eParticipation.html" class="text-white text-decoration-none small"
+                <a
+                  href="eParticipation.html"
+                  class="text-white text-decoration-none small"
                   >Engage with Us</a
                 >
               </li>
               <li class="mb-2">
-                <a href="contactUs.html" class="text-white text-decoration-none small"
+                <a
+                  href="contactUs.html"
+                  class="text-white text-decoration-none small"
                   >Submit complaint</a
                 >
               </li>
               <li class="mb-2">
-                <a href="contactUs.html" class="text-white text-decoration-none small"
+                <a
+                  href="contactUs.html"
+                  class="text-white text-decoration-none small"
                   >Report corruption</a
                 >
               </li>
@@ -1607,7 +1990,8 @@
         <div class="modal-content p-4">
           <div class="modal-header">
             <h5 class="modal-title" id="basicModalLabel">
-              <i class="bi bi-check-circle-fill text-primary me-2"></i>Payment Successful
+              <i class="bi bi-check-circle-fill text-primary me-2"></i>Payment
+              Successful
             </h5>
             <button
               type="button"
@@ -1630,7 +2014,6 @@
             <button type="button" class="btn btn-outline-border w-100">
               Stay on Website
             </button>
-            
           </div>
         </div>
       </div>
