@@ -385,17 +385,25 @@
           style="display: none"
         >
           <div class="container">
-            <div class="input-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-success" type="button">Search</button>
+            <div class="d-flex gap-4">
+              <div class="input-group flex-grow-1">
+                <span class="input-group-text bg-white border-end-0">
+                  <i class="bi bi-search"></i>
+                </span>
+                <input
+                  type="text"
+                  class="form-control ps-0 border-start-0 border-end-0"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="input-group-text bg-white">
+                  <i class="bi bi-mic"></i>
+                </button>
+              </div>
+              <button class="btn btn-primary">Search</button>
             </div>
             <div class="mt-8">
-              <h6 class="text-primary fw-semibold mb-2">Suggestions for you</h6>
+              <h6 class="text-primary fw-semibold mb-4">Suggestions for you</h6>
               <div class="d-flex flex-wrap gap-2">
                 <span class="badge bg-light text-dark rounded-sm px-3 py-2"
                   ><i class="bi bi-plus-lg"></i> Training</span
@@ -722,7 +730,7 @@
       <div class="container py-10">
         <div class="d-flex flex-column gap-10">
           <!-- Welcome Message -->
-          <div class="container d-flex flex-column gap-4">
+          <div class="d-flex flex-column gap-4">
             <h2 class="fw-bold">FAQs</h2>
             <p class="mb-0">
               Find answers to common questions about our products, services, and
@@ -731,7 +739,7 @@
           </div>
 
           <!-- main content -->
-          <div class="container mt-5">
+          <div class="mt-5">
             <div class="d-flex gap-3 align-items-center">
               <!-- Search Input -->
               <div class="input-group" style="max-width: 300px">
@@ -801,7 +809,7 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header border-0">
                           <button
-                            class="accordion-button collapsed border-0"
+                            class="accordion-button collapsed border-0 fw-semibold"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#faq1"
@@ -826,7 +834,7 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button
-                            class="accordion-button collapsed"
+                            class="accordion-button collapsed fw-semibold"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#faq2"
@@ -851,7 +859,7 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button
-                            class="accordion-button collapsed"
+                            class="accordion-button collapsed fw-semibold"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#faq3"
@@ -875,7 +883,7 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button
-                            class="accordion-button collapsed"
+                            class="accordion-button collapsed fw-semibold"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#faq4"
@@ -900,7 +908,7 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button
-                            class="accordion-button collapsed"
+                            class="accordion-button collapsed fw-semibold"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#faq5"
@@ -930,7 +938,7 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header border-0">
                           <button
-                            class="accordion-button collapsed border-0"
+                            class="accordion-button collapsed border-0 fw-semibold"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#faq1"
@@ -955,7 +963,7 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button
-                            class="accordion-button collapsed"
+                            class="accordion-button collapsed fw-semibold"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#faq2"
@@ -980,7 +988,7 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button
-                            class="accordion-button collapsed"
+                            class="accordion-button collapsed fw-semibold"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#faq3"
@@ -1004,7 +1012,7 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button
-                            class="accordion-button collapsed"
+                            class="accordion-button collapsed fw-semibold"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#faq4"
@@ -1029,7 +1037,7 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button
-                            class="accordion-button collapsed"
+                            class="accordion-button collapsed fw-semibold"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#faq5"
@@ -1054,6 +1062,21 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <!-- Comments & Suggestions -->
+          <div class="my-10 border-light p-4 rounded-4 border">
+            <img
+              src="../../images/ic-comments.svg"
+              alt="Comments icon"
+              class="mb-4"
+            />
+            <h5 class="fw-bold mb-4">Comments & suggestions</h5>
+            <p class="small mb-4">
+              For any inquiry or feedback on Government Services, please fill
+              the required information.
+            </p>
+            <a href="#" class="btn btn-primary">Contact us</a>
           </div>
         </div>
       </div>
