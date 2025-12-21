@@ -765,8 +765,8 @@
 
           <form novalidate class="d-flex flex-column gap-8 col-lg-10">
             <div class="d-flex flex-column gap-6">
-              <div class="d-flex gap-6">
-                <div class="w-50">
+              <div class="row g-3 g-md-6">
+                <div class="col-12 col-md-6">
                   <label for="firstName" class="form-label"
                     ><span class="text-danger">*</span>First Name</label
                   >
@@ -775,10 +775,9 @@
                     class="form-control"
                     id="firstName"
                     placeholder="Enter your first name"
-                    class="text-end"
                   />
                 </div>
-                <div class="w-50">
+                <div class="col-12 col-md-6">
                   <label for="lastName" class="form-label"
                     ><span class="text-danger">*</span>Last Name</label
                   >
@@ -787,12 +786,12 @@
                     class="form-control"
                     id="lastName"
                     placeholder="Enter your last name"
-                    class="text-end"
                   />
                 </div>
               </div>
-              <div class="d-flex gap-6">
-                <div class="w-50">
+
+              <div class="row g-3 g-md-6">
+                <div class="col-12 col-md-6">
                   <label for="email" class="form-label"
                     ><span class="text-danger">*</span>Email</label
                   >
@@ -801,10 +800,9 @@
                     class="form-control"
                     id="email"
                     placeholder="Enter email"
-                    class="text-end"
                   />
                 </div>
-                <div class="w-50">
+                <div class="col-12 col-md-6">
                   <label for="mobile" class="form-label"
                     ><span class="text-danger">*</span>Mobile</label
                   >
@@ -813,12 +811,12 @@
                     class="form-control"
                     id="mobile"
                     placeholder="Enter your mobile number"
-                    class="text-end"
                   />
                 </div>
               </div>
-              <div class="d-flex gap-6">
-                <div class="w-50">
+
+              <div class="row g-3 g-md-6">
+                <div class="col-12 col-md-6">
                   <label for="subject" class="form-label">Subject</label>
                   <input
                     class="form-control"
@@ -826,7 +824,7 @@
                     placeholder="Enter your subject"
                   />
                 </div>
-                <div class="w-50">
+                <div class="col-12 col-md-6">
                   <label for="Category" class="form-label">Category</label>
                   <select class="form-select" id="category">
                     <option selected>Suggestion</option>
@@ -841,8 +839,9 @@
                   </select>
                 </div>
               </div>
-              <div class="d-flex gap-6">
-                <div class="w-50">
+
+              <div class="row g-3 g-md-6">
+                <div class="col-12 col-md-6">
                   <label for="message" class="form-label"
                     >How can we help?</label
                   >
@@ -853,7 +852,7 @@
                     placeholder="Enter your question"
                   ></textarea>
                 </div>
-                <div class="w-50">
+                <div class="col-12 col-md-6">
                   <label class="form-label">Upload files</label>
                   <p class="text-muted small my-2">
                     Maximum file size allowed is 2MB, supported file formats
@@ -874,13 +873,11 @@
 
             <button
               type="submit"
-              class="btn btn-primary"
+              class="btn btn-primary mb-8 mb-lg-0"
               style="width: fit-content"
             >
               Submit request
             </button>
-
-            <div></div>
           </form>
         </main>
         <aside class="col-12 col-sm-8 col-md-6 col-lg-4 position-relative z-1">
