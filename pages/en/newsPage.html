@@ -29,21 +29,25 @@
     <div class="bg-light">
       <div class="container-fluid px-8">
         <!-- Main Bar -->
-        <div class="d-flex align-items-center py-2">
-          <img
-            src="../../images/ic-flag.svg"
-            alt="Saudi Flag"
-            class="me-2"
-            width="24"
-            height="24"
-            loading="lazy"
-          />
-          <small class="text-black"
-            >A government website registered with the Digital Government
-            Authority.</small
-          >
+        <div
+          class="d-flex flex-column flex-md-row align-items-start align-items-md-center py-2 gap-2"
+        >
+          <div class="d-flex align-items-center">
+            <img
+              src="../../images/ic-flag.svg"
+              alt="Saudi Flag"
+              class="me-2 flex-shrink-0"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
+            <small class="text-black">
+              A government website registered with the Digital Government
+              Authority.
+            </small>
+          </div>
           <a
-            class="text-primary ms-2 text-decoration-none"
+            class="text-primary text-decoration-none flex-shrink-0"
             role="button"
             id="togglePopup"
             onclick="togglePopup()"
@@ -726,7 +730,7 @@
       </div>
     </div>
 
-    <section class="px-20 py-10">
+    <section class="p-5 px-md-20 py-md-10">
       <div class="container d-flex flex-column gap-8 mb-8">
         <!--Breadcrumb-->
         <div class="container">
@@ -760,7 +764,7 @@
         </div>
         <!-- Welcome Message -->
         <div class="container d-flex flex-column gap-4">
-          <h2 class="fw-bold" style="font-size: 36px">
+          <h2 class="fw-bold fs-1" >
             The Saudi Society of Internal Auditors holds its General Assembly
             for the year 2021in Riyadh
           </h2>
@@ -778,69 +782,106 @@
         </div>
         <hr />
         <!-- News & Articles -->
-        <div class="container-fluid">
+        <div class="container-fluid px-3 px-md-5">
           <div class="row">
-            <!-- Sidebar -->
-            <nav
-              id="sideNav"
-              class="col-md-3 col-lg-2 d-md-block bg-white border-end"
-              style="height: 100vh; position: sticky; top: 0"
-            >
-              <div class="p-3">
-                <p class="text-muted mb-1">On this page</p>
-                <h5 class="fw-bold mb-3">Page Title</h5>
-                <ul class="nav flex-column" style="font-size: 14px">
-                  <li class="nav-item">
-                    <a
-                      href="#section1"
-                      class="nav-link active"
-                      style="
-                        border-left: 3px solid #198754;
-                        color: #000;
-                        font-weight: 600;
-                      "
-                      >Section 1</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a href="#section2" class="nav-link text-dark">Section 2</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#section3" class="nav-link text-dark">Section 3</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#section4" class="nav-link text-dark">Section 4</a>
-                    <ul class="nav flex-column ms-3">
-                      <li>
-                        <a href="#sub1" class="nav-link text-dark"
-                          >Sub Section 1</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#sub2" class="nav-link text-dark"
-                          >Sub Section 2</a
-                        >
-                      </li>
-                      <li>
-                        <a href="#sub3" class="nav-link text-dark"
-                          >Sub Section 3</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#section5" class="nav-link text-dark">Section 5</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+            <!-- Sidebar - Hide on mobile, show as offcanvas -->
+            <div class="col-lg-3 d-none d-lg-block">
+              <nav
+                id="sideNav"
+                class="bg-white border-end position-sticky"
+                style="top: 80px"
+              >
+                <div class="p-3">
+                  <p class="text-muted mb-1 small">On this page</p>
+                  <h5 class="fw-bold mb-3">Page Title</h5>
+                  <ul class="nav flex-column" style="font-size: 14px">
+                    <li class="nav-item">
+                      <a
+                        href="#section1"
+                        class="nav-link active"
+                        style="
+                          border-left: 3px solid #198754;
+                          color: #000;
+                          font-weight: 600;
+                        "
+                        >Section 1</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#section2" class="nav-link text-dark"
+                        >Section 2</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#section3" class="nav-link text-dark"
+                        >Section 3</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#section4" class="nav-link text-dark"
+                        >Section 4</a
+                      >
+                      <ul class="nav flex-column ms-3">
+                        <li>
+                          <a
+                            href="#subsection1"
+                            class="nav-link text-dark small"
+                            >Sub Section 1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#subsection2"
+                            class="nav-link text-dark small"
+                            >Sub Section 2</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#subsection3"
+                            class="nav-link text-dark small"
+                            >Sub Section 3</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#section5" class="nav-link text-dark"
+                        >Section 5</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#section6" class="nav-link text-dark"
+                        >Section 6</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
 
             <!-- Main Content -->
-            <div class="col-md-9 col-lg-10">
+            <div class="col-12 col-lg-9">
+              <!-- Mobile Navigation Button -->
+              <div
+                class="d-lg-none mb-3 sticky-top bg-white py-3 border-bottom"
+                style="z-index: 1020"
+              >
+                <button
+                  class="btn btn-outline-primary w-100"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#mobileNav"
+                  aria-controls="mobileNav"
+                >
+                  <i class="bi bi-list me-2"></i> Page Navigation
+                </button>
+              </div>
+
               <!-- Section 1 -->
               <div id="section1" class="mb-5">
-                <h1 class="fs-4">Section 1</h1>
-                <p class="small">
+                <h1 class="fs-4 mb-3">Section 1</h1>
+                <p class="small mb-3">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Integer posuere erat a ante. Sed posuere consectetur est at
                   lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum
@@ -856,8 +897,8 @@
 
               <!-- Section 2 -->
               <div id="section2" class="mb-5">
-                <h1 class="fs-4">Section 2</h1>
-                <p class="small">
+                <h1 class="fs-4 mb-3">Section 2</h1>
+                <p class="small mb-3">
                   Curabitur blandit tempus porttitor. Vestibulum id ligula porta
                   felis euismod semper. Nulla vitae elit libero, a pharetra
                   augue. Vivamus sagittis lacus vel augue laoreet rutrum
@@ -877,8 +918,8 @@
 
               <!-- Section 3 -->
               <div id="section3" class="mb-5">
-                <h1 class="fs-4">Section 3</h1>
-                <p class="small">
+                <h1 class="fs-4 mb-3">Section 3</h1>
+                <p class="small mb-3">
                   This section demonstrates another block of dummy text. Fusce
                   dapibus, tellus ac cursus commodo, tortor mauris condimentum
                   nibh, ut fermentum massa justo sit amet risus. Maecenas
@@ -893,17 +934,17 @@
 
               <!-- Section 4 -->
               <div id="section4" class="mb-5">
-                <h1 class="fs-4">Section 4</h1>
-                <p class="small">
+                <h1 class="fs-4 mb-3">Section 4</h1>
+                <p class="small mb-4">
                   This section contains multiple subsections for demonstration
                   purposes. Each subsection will show dummy content and
                   examples.
                 </p>
 
                 <!-- Sub Section 1 -->
-                <div id="subsection1" class="mt-4">
-                  <h1 class="fs-5">1. Sub Section 1</h1>
-                  <p class="small">
+                <div id="subsection1" class="mb-4">
+                  <h2 class="fs-5 mb-3">1. Sub Section 1</h2>
+                  <p class="small mb-3">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Donec sed odio dui. Integer posuere erat a ante venenatis
                     dapibus posuere velit aliquet. Cras mattis consectetur purus
@@ -912,7 +953,8 @@
                   <img
                     src="../../images/bg-article-example.svg"
                     alt="Placeholder"
-                    class="img-fluid rounded my-3"
+                    class="img-fluid rounded my-3 w-100"
+                    style="max-height: 400px; object-fit: cover"
                   />
                   <p class="small">
                     Praesent commodo cursus magna, vel scelerisque nisl
@@ -922,9 +964,9 @@
                 </div>
 
                 <!-- Sub Section 2 -->
-                <div id="subsection2" class="mt-4">
-                  <h1 class="fs-5">2. Sub Section 2</h1>
-                  <p class="small">
+                <div id="subsection2" class="mb-4">
+                  <h2 class="fs-5 mb-3">2. Sub Section 2</h2>
+                  <p class="small mb-3">
                     Aenean lacinia bibendum nulla sed consectetur. Curabitur
                     blandit tempus porttitor. Maecenas faucibus mollis interdum.
                     Sed posuere consectetur est at lobortis.
@@ -937,9 +979,9 @@
                 </div>
 
                 <!-- Sub Section 3 -->
-                <div id="subsection3" class="mt-4">
-                  <h1 class="fs-5">3. Sub Section 3</h1>
-                  <p class="small">
+                <div id="subsection3" class="mb-4">
+                  <h2 class="fs-5 mb-3">3. Sub Section 3</h2>
+                  <p class="small mb-3">
                     Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac
                     cursus commodo, tortor mauris condimentum nibh, ut fermentum
                     massa justo sit amet risus. Nulla vitae elit libero, a
@@ -954,8 +996,8 @@
 
               <!-- Section 5 -->
               <div id="section5" class="mb-5">
-                <h1 class="fs-4">Section 5</h1>
-                <p class="small">
+                <h1 class="fs-4 mb-3">Section 5</h1>
+                <p class="small mb-3">
                   Integer posuere erat a ante venenatis dapibus posuere velit
                   aliquet. Aenean lacinia bibendum nulla sed consectetur. Nulla
                   vitae elit libero, a pharetra augue. Donec sed odio dui.
@@ -969,8 +1011,8 @@
 
               <!-- Section 6 -->
               <div id="section6" class="mb-5">
-                <h1 class="fs-4">Section 6</h1>
-                <p class="small">
+                <h1 class="fs-4 mb-3">Section 6</h1>
+                <p class="small mb-3">
                   Donec ullamcorper nulla non metus auctor fringilla. Vestibulum
                   id ligula porta felis euismod semper. Morbi leo risus, porta
                   ac consectetur ac, vestibulum at eros. Cras mattis consectetur
@@ -981,26 +1023,114 @@
                   venenatis vestibulum. Integer posuere erat a ante venenatis
                   dapibus posuere velit aliquet. This is an example of the
                   paragraph style followed by the design system. The same style
-                  is consistent across all body text sections. This is an
-                  example of the paragraph style followed by the design system.
-                  The same style is consistent across all body text
-                  sections.This is an example of the paragraph style followed by
-                  the design system. The same style is consistent across all
-                  body text sections. This is an example of the paragraph style
-                  followed by the design system. The same style is consistent
-                  across all body text sections.This is an example of the
-                  paragraph style followed by the design system. The same style
-                  is consistent across all body text sections. This is an
-                  example of the paragraph style followed by the design system.
-                  The same style is consistent across all body text
-                  sections.This is an example of the paragraph style followed by
-                  the design system. The same style is consistent across all
-                  body text sections. This is an example of the paragraph style
-                  followed by the design system. The same style is consistent
-                  across all body text sections.
+                  is consistent across all body text sections.
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- Mobile Offcanvas Navigation -->
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="mobileNav"
+          aria-labelledby="mobileNavLabel"
+        >
+          <div class="offcanvas-header border-bottom">
+            <div>
+              <p class="text-muted mb-1 small">On this page</p>
+              <h5 class="fw-bold mb-0" id="mobileNavLabel">Page Title</h5>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="nav flex-column" style="font-size: 14px">
+              <li class="nav-item">
+                <a
+                  href="#section1"
+                  class="nav-link active mobile-nav-link"
+                  data-target="section1"
+                  style="
+                    border-left: 3px solid #198754;
+                    color: #000;
+                    font-weight: 600;
+                  "
+                  >Section 1</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#section2"
+                  data-target="section2"
+                  class="nav-link text-dark mobile-nav-link"
+                  >Section 2</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#section3"
+                  data-target="section3"
+                  class="nav-link text-dark mobile-nav-link"
+                  >Section 3</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#section4"
+                  data-target="section4"
+                  class="nav-link text-dark mobile-nav-link"
+                  >Section 4</a
+                >
+                <ul class="nav flex-column ms-3">
+                  <li>
+                    <a
+                      href="#subsection1"
+                      data-target="subsection1"
+                      class="nav-link text-dark small mobile-nav-link"
+                      >Sub Section 1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#subsection2"
+                      data-target="subsection2"
+                      class="nav-link text-dark small mobile-nav-link"
+                      >Sub Section 2</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#subsection3"
+                      class="nav-link text-dark small mobile-nav-link"
+                      data-target="subsection3"
+                      >Sub Section 3</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#section5"
+                  class="nav-link text-dark mobile-nav-link"
+                  data-target="section5"
+                  >Section 5</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#section6"
+                  data-target="section6"
+                  class="nav-link text-dark mobile-nav-link"
+                  >Section 6</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>

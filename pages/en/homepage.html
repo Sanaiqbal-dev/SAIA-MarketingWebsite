@@ -108,21 +108,25 @@
     <div class="bg-light">
       <div class="container-fluid px-8">
         <!-- Main Bar -->
-        <div class="d-flex align-items-center py-2">
-          <img
-            src="../../images/ic-flag.svg"
-            alt="Saudi Flag"
-            class="me-2"
-            width="24"
-            height="24"
-            loading="lazy"
-          />
-          <small class="text-black"
-            >A government website registered with the Digital Government
-            Authority.</small
-          >
+        <div
+          class="d-flex flex-column flex-md-row align-items-start align-items-md-center py-2 gap-2"
+        >
+          <div class="d-flex align-items-center">
+            <img
+              src="../../images/ic-flag.svg"
+              alt="Saudi Flag"
+              class="me-2 flex-shrink-0"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
+            <small class="text-black">
+              A government website registered with the Digital Government
+              Authority.
+            </small>
+          </div>
           <a
-            class="text-primary ms-2 text-decoration-none"
+            class="text-primary text-decoration-none flex-shrink-0"
             role="button"
             id="togglePopup"
             onclick="togglePopup()"
@@ -841,7 +845,7 @@
             ></button>
           </div>
           <div
-            class="carousel-inner py-20 px-20 d-flex align-items-center"
+            class="carousel-inner py-5 px-5 py-lg-20 px-lg-20 d-flex align-items-center"
             bis_skin_checked="1"
           >
             <div class="carousel-item" bis_skin_checked="1">
@@ -895,9 +899,9 @@
     </section>
 
     <!-- About Section -->
-    <section class="py-10 px-20 position-relative">
+    <section class="py-5 px-5 py-lg-10 px-lg-20 position-relative">
       <div class="container">
-        <div class="row align-items-center mb-5">
+        <div class="row align-items-center mb-5 gap-4 gap-lg-0">
           <div
             class="col-lg-12 d-flex justify-content-between align-items-center"
           >
@@ -960,8 +964,8 @@
     </section>
 
     <!-- Our Services -->
-    <section class="py-10 bg-light">
-      <div class="container px-20">
+    <section class="py-5 py-lg-10 bg-light">
+      <div class="container px-5 px-lg-20">
         <div class="row align-items-center mb-4">
           <div class="col">
             <h2 class="fw-bold">Our Services</h2>
@@ -1116,16 +1120,19 @@
       </div>
     </section>
     <!-- Articles and News -->
-    <section class="py-10 px-20">
+    <section class="py-5 px-5 py-lg-10 px-lg-20">
       <div class="container">
         <div class="row align-items-center mb-4">
           <div
-            class="col-lg-12 d-flex justify-content-between align-items-center"
+            class="col-lg-12 d-flex justify-content-between align-items-center gap-2"
           >
-            <h2 class="fw-bold mb-3">Articles and News Section</h2>
-            <a href="newsArticles.html" class="btn btn-outline-secondary"
-              >View All</a
+            <h2 class="fw-bold mb-3 flex-grow-1">Articles and News Section</h2>
+            <a
+              href="newsArticles.html"
+              class="btn btn-outline-secondary px-3 text-nowrap flex-shrink-0"
             >
+              View All
+            </a>
           </div>
           <p class="text-muted">
             Stay updated with the latest news and insights in internal auditing
@@ -1213,7 +1220,7 @@
     </section>
 
     <!-- Partners Section -->
-    <section class="py-10 px-20">
+    <section class="py-5 px-5 py-lg-10 px-lg-20">
       <div class="container">
         <div class="mb-4">
           <h2 class="fw-bold">Partner Section / Certifications</h2>

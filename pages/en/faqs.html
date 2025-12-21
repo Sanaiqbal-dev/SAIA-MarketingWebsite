@@ -29,21 +29,25 @@
     <div class="bg-light">
       <div class="container-fluid px-8">
         <!-- Main Bar -->
-        <div class="d-flex align-items-center py-2">
-          <img
-            src="../../images/ic-flag.svg"
-            alt="Saudi Flag"
-            class="me-2"
-            width="24"
-            height="24"
-            loading="lazy"
-          />
-          <small class="text-black"
-            >A government website registered with the Digital Government
-            Authority.</small
-          >
+        <div
+          class="d-flex flex-column flex-md-row align-items-start align-items-md-center py-2 gap-2"
+        >
+          <div class="d-flex align-items-center">
+            <img
+              src="../../images/ic-flag.svg"
+              alt="Saudi Flag"
+              class="me-2 flex-shrink-0"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
+            <small class="text-black">
+              A government website registered with the Digital Government
+              Authority.
+            </small>
+          </div>
           <a
-            class="text-primary ms-2 text-decoration-none"
+            class="text-primary text-decoration-none flex-shrink-0"
             role="button"
             id="togglePopup"
             onclick="togglePopup()"
@@ -769,37 +773,43 @@
             </div>
 
             <div class="mt-16 d-flex flex-column gap-6">
-              <!-- Tabs: Overview, Course Content, Required Documents -->
-              <ul class="nav nav-tabs custom-tabs" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link active"
-                    id="all-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#all-section"
-                    type="button"
-                    role="tab"
-                    aria-controls="all"
-                    aria-selected="true"
-                  >
-                    All
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button
-                    class="nav-link"
-                    id="category-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#category-section"
-                    type="button"
-                    role="tab"
-                    aria-controls="category"
-                    aria-selected="false"
-                  >
-                    category
-                  </button>
-                </li>
-              </ul>
+              <!-- Tabs: Horizontal scrollable on mobile -->
+              <div class="overflow-auto">
+                <ul
+                  class="nav nav-tabs custom-tabs flex-nowrap"
+                  id="myTab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="all-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#all-section"
+                      type="button"
+                      role="tab"
+                      aria-controls="all"
+                      aria-selected="true"
+                    >
+                      All
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="category-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#category-section"
+                      type="button"
+                      role="tab"
+                      aria-controls="category"
+                      aria-selected="false"
+                    >
+                      Category
+                    </button>
+                  </li>
+                </ul>
+              </div>
 
               <div class="tab-content">
                 <div class="tab-pane fade show active" id="all-section">

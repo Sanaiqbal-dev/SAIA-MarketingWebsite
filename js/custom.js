@@ -283,4 +283,122 @@ document.addEventListener("DOMContentLoaded", function () {
     alert("Thank you for your rating of " + currentRating + " stars!");
     closeRating();
   };
+
+  // Initialize Swiper
+  // Initialize Swiper
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".serviceCarousel", {
+      // Enable loop mode
+      loop: true,
+
+      // Enable touch/swipe
+      simulateTouch: true,
+      allowTouchMove: true,
+      touchRatio: 1,
+      touchAngle: 45,
+      grabCursor: true,
+
+      // Autoplay configuration
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+
+      // Pagination
+      pagination: {
+        el: ".serviceCarousel-pagination",
+        clickable: true,
+      },
+
+      // Default spacing
+      spaceBetween: 24,
+
+      // Responsive breakpoints
+      breakpoints: {
+        // Mobile (320px and up)
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 16,
+        },
+        // Small tablets (576px and up)
+        576: {
+          slidesPerView: 1.5,
+          spaceBetween: 20,
+        },
+        // Tablets (768px and up)
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+        // Small desktop (992px and up) - 3 slides
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+        // Medium desktop (1100px and up) - 4 slides
+        1100: {
+          slidesPerView: 4,
+          spaceBetween: 24,
+        },
+        // Large desktop (1600px and up) - 5 slides
+        1600: {
+          slidesPerView: 5,
+          spaceBetween: 24,
+        },
+      },
+
+      // Speed
+      speed: 600,
+
+      // Effect
+      effect: "slide",
+    });
+  });
+
+  // Get all navigation links with the mobile-nav-link class
+  const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+  const offcanvasElement = document.getElementById("mobileNav");
+
+  if (offcanvasElement && mobileNavLinks.length > 0) {
+    mobileNavLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        // Prevent default anchor behavior
+        e.preventDefault();
+
+        // Get target section ID from data attribute
+        const targetId = this.getAttribute("data-target");
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          // Get the Bootstrap offcanvas instance
+          const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+
+          // Close the offcanvas first
+          if (bsOffcanvas) {
+            bsOffcanvas.hide();
+          }
+
+          // Wait for offcanvas to close, then scroll to target
+          offcanvasElement.addEventListener(
+            "hidden.bs.offcanvas",
+            function scrollToTarget() {
+              // Smooth scroll to the target section
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+
+              // Remove this event listener after execution to prevent multiple calls
+              offcanvasElement.removeEventListener(
+                "hidden.bs.offcanvas",
+                scrollToTarget
+              );
+            },
+            { once: true }
+          );
+        }
+      });
+    });
+  }
 });

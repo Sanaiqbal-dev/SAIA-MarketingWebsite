@@ -29,21 +29,25 @@
     <div class="bg-light">
       <div class="container-fluid px-8">
         <!-- Main Bar -->
-        <div class="d-flex align-items-center py-2">
-          <img
-            src="../../images/ic-flag.svg"
-            alt="Saudi Flag"
-            class="me-2"
-            width="24"
-            height="24"
-            loading="lazy"
-          />
-          <small class="text-black"
-            >A government website registered with the Digital Government
-            Authority.</small
-          >
+        <div
+          class="d-flex flex-column flex-md-row align-items-start align-items-md-center py-2 gap-2"
+        >
+          <div class="d-flex align-items-center">
+            <img
+              src="../../images/ic-flag.svg"
+              alt="Saudi Flag"
+              class="me-2 flex-shrink-0"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
+            <small class="text-black">
+              A government website registered with the Digital Government
+              Authority.
+            </small>
+          </div>
           <a
-            class="text-primary ms-2 text-decoration-none"
+            class="text-primary text-decoration-none flex-shrink-0"
             role="button"
             id="togglePopup"
             onclick="togglePopup()"
@@ -727,7 +731,7 @@
     </div>
 
     <!-- <section class="px-20 py-10">-->
-    <div class="container-fluid py-10 px-20 has-partial-bg">
+    <div class="container-fluid p-5 py-md-10 px-md-20 has-partial-bg">
       <section class="row">
         <main class="col-lg-8 d-flex flex-column gap-4 z-1">
           <!--Breadcrumb-->
@@ -768,20 +772,19 @@
             >
           </div>
           <!-- Tags -->
-          <div class="d-flex gap-2">
+          <div class="d-flex flex-wrap gap-2">
             <p
-              class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
+              class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag mb-0 text-nowrap"
             >
               Online
             </p>
             <p
-              class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+              class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium mb-0 text-nowrap"
             >
               4-Months
             </p>
-
             <p
-              class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+              class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium mb-0 text-nowrap"
             >
               18-sessions
             </p>
@@ -792,53 +795,58 @@
             field based on the IIA global standards.
           </p>
 
-          <div class="mt-16 d-flex flex-column gap-6">
-            <!-- Tabs: Overview, Course Content, Required Documents -->
-            <ul class="nav nav-tabs custom-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link active"
-                  id="conditions-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#conditions-section"
-                  type="button"
-                  role="tab"
-                  aria-controls="conditions"
-                  aria-selected="true"
-                >
-                  Conditions
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="course-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#course-section"
-                  type="button"
-                  role="tab"
-                  aria-controls="course"
-                  aria-selected="false"
-                >
-                  Program Content
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="documents-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#documents-section"
-                  type="button"
-                  role="tab"
-                  aria-controls="documents"
-                  aria-selected="false"
-                >
-                  Required Documents
-                </button>
-              </li>
-            </ul>
-
+          <div class="mt-8 mt-lg-16 d-flex flex-column gap-6">
+            <!-- Tabs: Horizontal scrollable on mobile -->
+            <div class="overflow-auto">
+              <ul
+                class="nav nav-tabs custom-tabs flex-nowrap"
+                id="myTab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active text-nowrap"
+                    id="conditions-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#conditions-section"
+                    type="button"
+                    role="tab"
+                    aria-controls="conditions"
+                    aria-selected="true"
+                  >
+                    Conditions
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link text-nowrap"
+                    id="course-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#course-section"
+                    type="button"
+                    role="tab"
+                    aria-controls="course"
+                    aria-selected="false"
+                  >
+                    Program Content
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link text-nowrap"
+                    id="documents-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#documents-section"
+                    type="button"
+                    role="tab"
+                    aria-controls="documents"
+                    aria-selected="false"
+                  >
+                    Required Documents
+                  </button>
+                </li>
+              </ul>
+            </div>
             <div class="tab-content">
               <div class="tab-pane fade show active" id="conditions-section">
                 <div class="ratio ratio-16x9 mb-4">
@@ -911,7 +919,9 @@
             </div>
           </div>
         </main>
-        <aside class="col-lg-4 position-relative z-1">
+        <aside
+          class="col-12 col-sm-8 col-md-6 col-lg-4 position-relative z-1 mt-8 mt-lg-0"
+        >
           <div class="border rounded-4 bg-white p-10 shadow-sm">
             <!-- Target Audience -->
             <div class="mb-4">
@@ -1049,365 +1059,343 @@
     </div>
     <!-- Related Programs Carousel / Grid -->
     <div class="mt-5 pb-10" style="background-color: #f7fdf9">
-      <div
-        class="d-flex justify-content-between align-items-start mb-6 py-10 px-20"
-      >
-        <div>
-          <h2 class="h4 fw-bold mb-4">Related Programs</h2>
-          <p class="mb-6">
-            Service description example To buy a plot to build your house, this
-            requires documenting the sale<br />
-            and purchase process in the notarial offices or notary services to
-            register the property in your name.
-          </p>
+      <div class="mb-6 p-3 p-md-5 py-md-10 px-md-20">
+        <div
+          class="d-flex justify-content-between align-items-start align-items-md-center gap-3 mb-3 mb-md-4"
+        >
+          <h2 class="h4 fw-bold mb-0">Related Programs</h2>
+          <a
+            href="#"
+            class="btn btn-primary text-nowrap flex-shrink-0 align-self-start"
+            >View all</a
+          >
         </div>
-        <a href="#" class="btn btn-primary">View all</a>
+        <p class="mb-0">
+          Service description example To buy a plot to build your house, this
+          requires documenting the sale and purchase process in the notarial
+          offices or notary services to register the property in your name.
+        </p>
       </div>
       <!-- Carousel -->
       <div id="servicesCarousel" class="swiper serviceCarousel">
         <div class="swiper-wrapper">
+          <!-- Slide 1 -->
           <div class="swiper-slide">
-            <div class="card p-4 rounded-4 gap-4">
+            <div class="card h-100">
               <img
                 src="../../images/bg-article-1.svg"
-                class="card-img-top rounded-3"
+                class="card-img-top"
                 alt="Article"
+                loading="lazy"
               />
-              <div class="card-body d-flex flex-column gap-3">
+              <div class="card-body">
                 <h5 class="card-title">Program Name</h5>
-                <p class="card-text">Card content placeholder text goes here</p>
-                <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Tag 1
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Tag 2
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Tag 3
-                  </p>
-                </div>
-                <div class="d-flex flex-column gap-1">
-                  <!-- 4 filled stars -->
-                  <div>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+                <p class="card-text text-muted">
+                  Card content placeholder text goes here
+                </p>
 
-                    <!-- 1 empty star (or use bi-star-half for a 4.5 rating) -->
-                    <i class="bi bi-star-fill" style="color: lightgray"></i>
+                <!-- Tags -->
+                <div class="tags-container">
+                  <span
+                    class="tag borderOnlineOnlineOnlineOnline-success-subtle bg-success-subtle text-primary"
+                    >Tag 1</span
+                  >
+                  <span class="tag tag-primary">Tag 2</span>
+                  <span class="tag tag-light">Tag 3</span>
+                </div>
+
+                <!-- Rating -->
+                <div class="rating-container">
+                  <div class="stars">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-muted"></i>
                   </div>
                   <span class="text-muted small">12 reviews</span>
                 </div>
-                <div>
+
+                <!-- Button -->
+                <div class="d-flex flex-wrap gap-2">
                   <a
                     href="#"
-                    class="btn btn-outline-light text-black"
-                    style="width: fit-content"
+                    class="btn btn-outline-light text-black flex-grow-1 flex-sm-grow-0"
                     >Details</a
                   >
                   <a
-                    href="#"
-                    class="btn btn-primary ms-2"
-                    style="width: fit-content"
+                    href="programPage.html"
+                    class="btn btn-primary flex-grow-1 flex-sm-grow-0"
                     >Subscribe Now</a
                   >
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Slide 2 -->
           <div class="swiper-slide">
-            <div class="card p-4 rounded-4 gap-4">
+            <div class="card h-100">
               <img
                 src="../../images/bg-article-1.svg"
-                class="card-img-top rounded-3"
+                class="card-img-top"
                 alt="Article"
+                loading="lazy"
               />
-              <div class="card-body d-flex flex-column gap-3">
+              <div class="card-body">
                 <h5 class="card-title">Program Name</h5>
-                <p class="card-text">Card content placeholder text goes here</p>
-                <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Tag 1
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Tag 2
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Tag 3
-                  </p>
-                </div>
-                <div class="d-flex flex-column gap-1">
-                  <!-- 4 filled stars -->
-                  <div>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+                <p class="card-text text-muted">
+                  Card content placeholder text goes here
+                </p>
 
-                    <!-- 1 empty star (or use bi-star-half for a 4.5 rating) -->
-                    <i class="bi bi-star-fill" style="color: lightgray"></i>
+                <!-- Tags -->
+                <div class="tags-container">
+                  <span
+                    class="tag borderOnlineOnlineOnlineOnline-success-subtle bg-success-subtle text-primary"
+                    >Tag 1</span
+                  >
+                  <span class="tag tag-primary">Tag 2</span>
+                  <span class="tag tag-light">Tag 3</span>
+                </div>
+
+                <!-- Rating -->
+                <div class="rating-container">
+                  <div class="stars">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-muted"></i>
                   </div>
                   <span class="text-muted small">12 reviews</span>
                 </div>
-                <div>
+
+                <!-- Button -->
+                <div class="d-flex flex-wrap gap-2">
                   <a
                     href="#"
-                    class="btn btn-outline-light text-black"
-                    style="width: fit-content"
+                    class="btn btn-outline-light text-black flex-grow-1 flex-sm-grow-0"
                     >Details</a
                   >
                   <a
-                    href="#"
-                    class="btn btn-primary ms-2"
-                    style="width: fit-content"
+                    href="programPage.html"
+                    class="btn btn-primary flex-grow-1 flex-sm-grow-0"
                     >Subscribe Now</a
                   >
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Slide 3 -->
           <div class="swiper-slide">
-            <div class="card p-4 rounded-4 gap-4">
+            <div class="card h-100">
               <img
                 src="../../images/bg-article-1.svg"
-                class="card-img-top rounded-3"
+                class="card-img-top"
                 alt="Article"
+                loading="lazy"
               />
-              <div class="card-body d-flex flex-column gap-3">
+              <div class="card-body">
                 <h5 class="card-title">Program Name</h5>
-                <p class="card-text">Card content placeholder text goes here</p>
-                <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Tag 1
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Tag 2
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Tag 3
-                  </p>
-                </div>
-                <div class="d-flex flex-column gap-1">
-                  <!-- 4 filled stars -->
-                  <div>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+                <p class="card-text text-muted">
+                  Card content placeholder text goes here
+                </p>
 
-                    <!-- 1 empty star (or use bi-star-half for a 4.5 rating) -->
-                    <i class="bi bi-star-fill" style="color: lightgray"></i>
+                <!-- Tags -->
+                <div class="tags-container">
+                  <span
+                    class="tag borderOnlineOnlineOnlineOnline-success-subtle bg-success-subtle text-primary"
+                    >Tag 1</span
+                  >
+                  <span class="tag tag-primary">Tag 2</span>
+                  <span class="tag tag-light">Tag 3</span>
+                </div>
+
+                <!-- Rating -->
+                <div class="rating-container">
+                  <div class="stars">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-muted"></i>
                   </div>
                   <span class="text-muted small">12 reviews</span>
                 </div>
-                <div>
+
+                <!-- Button -->
+                <div class="d-flex flex-wrap gap-2">
                   <a
                     href="#"
-                    class="btn btn-outline-light text-black"
-                    style="width: fit-content"
+                    class="btn btn-outline-light text-black flex-grow-1 flex-sm-grow-0"
                     >Details</a
                   >
                   <a
-                    href="#"
-                    class="btn btn-primary ms-2"
-                    style="width: fit-content"
+                    href="programPage.html"
+                    class="btn btn-primary flex-grow-1 flex-sm-grow-0"
                     >Subscribe Now</a
                   >
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Slide 4 -->
           <div class="swiper-slide">
-            <div class="card p-4 rounded-4 gap-4">
+            <div class="card h-100">
               <img
                 src="../../images/bg-article-1.svg"
-                class="card-img-top rounded-3"
+                class="card-img-top"
                 alt="Article"
+                loading="lazy"
               />
-              <div class="card-body d-flex flex-column gap-3">
+              <div class="card-body">
                 <h5 class="card-title">Program Name</h5>
-                <p class="card-text">Card content placeholder text goes here</p>
-                <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Tag 1
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Tag 2
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Tag 3
-                  </p>
-                </div>
-                <div class="d-flex flex-column gap-1">
-                  <!-- 4 filled stars -->
-                  <div>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+                <p class="card-text text-muted">
+                  Card content placeholder text goes here
+                </p>
 
-                    <!-- 1 empty star (or use bi-star-half for a 4.5 rating) -->
-                    <i class="bi bi-star-fill" style="color: lightgray"></i>
+                <!-- Tags -->
+                <div class="tags-container">
+                  <span
+                    class="tag borderOnlineOnlineOnlineOnline-success-subtle bg-success-subtle text-primary"
+                    >Tag 1</span
+                  >
+                  <span class="tag tag-primary">Tag 2</span>
+                  <span class="tag tag-light">Tag 3</span>
+                </div>
+
+                <!-- Rating -->
+                <div class="rating-container">
+                  <div class="stars">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-muted"></i>
                   </div>
                   <span class="text-muted small">12 reviews</span>
                 </div>
-                <div>
+
+                <!-- Button -->
+                <div class="d-flex flex-wrap gap-2">
                   <a
                     href="#"
-                    class="btn btn-outline-light text-black"
-                    style="width: fit-content"
+                    class="btn btn-outline-light text-black flex-grow-1 flex-sm-grow-0"
                     >Details</a
                   >
                   <a
-                    href="#"
-                    class="btn btn-primary ms-2"
-                    style="width: fit-content"
+                    href="programPage.html"
+                    class="btn btn-primary flex-grow-1 flex-sm-grow-0"
                     >Subscribe Now</a
                   >
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Slide 5 -->
           <div class="swiper-slide">
-            <div class="card p-4 rounded-4 gap-4">
+            <div class="card h-100">
               <img
                 src="../../images/bg-article-1.svg"
-                class="card-img-top rounded-3"
+                class="card-img-top"
                 alt="Article"
+                loading="lazy"
               />
-              <div class="card-body d-flex flex-column gap-3">
+              <div class="card-body">
                 <h5 class="card-title">Program Name</h5>
-                <p class="card-text">Card content placeholder text goes here</p>
-                <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Tag 1
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Tag 2
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Tag 3
-                  </p>
-                </div>
-                <div class="d-flex flex-column gap-1">
-                  <!-- 4 filled stars -->
-                  <div>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+                <p class="card-text text-muted">
+                  Card content placeholder text goes here
+                </p>
 
-                    <!-- 1 empty star (or use bi-star-half for a 4.5 rating) -->
-                    <i class="bi bi-star-fill" style="color: lightgray"></i>
+                <!-- Tags -->
+                <div class="tags-container">
+                  <span
+                    class="tag borderOnlineOnlineOnlineOnline-success-subtle bg-success-subtle text-primary"
+                    >Tag 1</span
+                  >
+                  <span class="tag tag-primary">Tag 2</span>
+                  <span class="tag tag-light">Tag 3</span>
+                </div>
+
+                <!-- Rating -->
+                <div class="rating-container">
+                  <div class="stars">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-muted"></i>
                   </div>
                   <span class="text-muted small">12 reviews</span>
                 </div>
-                <div>
+
+                <!-- Button -->
+                <div class="d-flex flex-wrap gap-2">
                   <a
                     href="#"
-                    class="btn btn-outline-light text-black"
-                    style="width: fit-content"
+                    class="btn btn-outline-light text-black flex-grow-1 flex-sm-grow-0"
                     >Details</a
                   >
                   <a
-                    href="#"
-                    class="btn btn-primary ms-2"
-                    style="width: fit-content"
+                    href="programPage.html"
+                    class="btn btn-primary flex-grow-1 flex-sm-grow-0"
                     >Subscribe Now</a
                   >
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Slide 6 -->
           <div class="swiper-slide">
-            <div class="card p-4 rounded-4 gap-4">
+            <div class="card h-100">
               <img
                 src="../../images/bg-article-1.svg"
-                class="card-img-top rounded-3"
+                class="card-img-top"
                 alt="Article"
+                loading="lazy"
               />
-              <div class="card-body d-flex flex-column gap-3">
+              <div class="card-body">
                 <h5 class="card-title">Program Name</h5>
-                <p class="card-text">Card content placeholder text goes here</p>
-                <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Tag 1
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Tag 2
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Tag 3
-                  </p>
-                </div>
-                <div class="d-flex flex-column gap-1">
-                  <!-- 4 filled stars -->
-                  <div>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+                <p class="card-text text-muted">
+                  Card content placeholder text goes here
+                </p>
 
-                    <!-- 1 empty star (or use bi-star-half for a 4.5 rating) -->
-                    <i class="bi bi-star-fill" style="color: lightgray"></i>
+                <!-- Tags -->
+                <div class="tags-container">
+                  <span
+                    class="tag borderOnlineOnlineOnlineOnline-success-subtle bg-success-subtle text-primary"
+                    >Tag 1</span
+                  >
+                  <span class="tag tag-primary">Tag 2</span>
+                  <span class="tag tag-light">Tag 3</span>
+                </div>
+
+                <!-- Rating -->
+                <div class="rating-container">
+                  <div class="stars">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star text-muted"></i>
                   </div>
                   <span class="text-muted small">12 reviews</span>
                 </div>
-                <div>
+
+                <!-- Button -->
+                <div class="d-flex flex-wrap gap-2">
                   <a
                     href="#"
-                    class="btn btn-outline-light text-black"
-                    style="width: fit-content"
+                    class="btn btn-outline-light text-black flex-grow-1 flex-sm-grow-0"
                     >Details</a
                   >
                   <a
-                    href="#"
-                    class="btn btn-primary ms-2"
-                    style="width: fit-content"
+                    href="programPage.html"
+                    class="btn btn-primary flex-grow-1 flex-sm-grow-0"
                     >Subscribe Now</a
                   >
                 </div>
@@ -1415,12 +1403,14 @@
             </div>
           </div>
         </div>
-        <div class="serviceCarousel-pagination"></div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination serviceCarousel-pagination"></div>
       </div>
     </div>
 
     <!-- Comments & Suggestions -->
-    <div class="my-10 mx-20 border-light p-4 rounded-4 border">
+    <div class="m-5 my-lg-10 mx-lg-20 border-light p-4 rounded-4 border">
       <img
         src="../../images/ic-comments.svg"
         alt="Comments icon"
