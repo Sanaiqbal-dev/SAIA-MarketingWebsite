@@ -47,6 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // ---------------------
   // SEARCH DROPDOWN
   // ---------------------
+  // ---------------------
+  // SEARCH DROPDOWN
+  // ---------------------
   const searchDropdown = document.getElementById("searchDropdown");
 
   document.querySelectorAll(".search-trigger").forEach((btn) => {
@@ -60,12 +63,32 @@ document.addEventListener("DOMContentLoaded", function () {
       if (instance) instance.hide();
 
       if (searchDropdown) {
-        searchDropdown.style.display =
-          searchDropdown.style.display === "block" ? "none" : "block";
+        if (searchDropdown.style.display === "block") {
+          // Close dropdown and remove active
+          searchDropdown.style.display = "none";
+          this.classList.remove("active");
+        } else {
+          // Open dropdown and add active
+          searchDropdown.style.display = "block";
+          this.classList.add("active");
+        }
       }
     });
   });
 
+  document.addEventListener("click", (e) => {
+    if (
+      searchDropdown &&
+      !e.target.closest(".search-trigger") &&
+      !e.target.closest("#searchDropdown")
+    ) {
+      searchDropdown.style.display = "none";
+      // Only remove active from search triggers
+      document.querySelectorAll(".search-trigger").forEach((btn) => {
+        btn.classList.remove("active");
+      });
+    }
+  });
   document.addEventListener("click", (e) => {
     if (
       searchDropdown &&
@@ -401,4 +424,64 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  // ---------------------
+  // SET ACTIVE NAV ITEM BASED ON CURRENT PAGE
+  // ---------------------
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Check dropdown items first (child links in dropdown menus)
+  const dropdownLinks = document.querySelectorAll(".dropdown-menu-hover a");
+  dropdownLinks.forEach((dropdownLink) => {
+    const linkHref = dropdownLink.getAttribute("href");
+
+    if (
+      linkHref &&
+      (currentPage === linkHref ||
+        currentPage.includes(linkHref.replace(".html", "")))
+    ) {
+      // Find the parent nav-item with dropdown-hover class
+      const parentNavItem = dropdownLink.closest(".dropdown-hover");
+      if (parentNavItem) {
+        // Add active class to the parent nav-item and its nav-link
+        parentNavItem.classList.add("active");
+        const parentNavLink = parentNavItem.querySelector(".nav-link");
+        if (parentNavLink) {
+          parentNavLink.classList.add("active");
+        }
+      }
+    }
+  });
+
+  // Then check top-level nav links (like Library)
+  const navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach((link) => {
+    const linkHref = link.getAttribute("href");
+
+    // Only mark as active if it's a direct link (not a dropdown toggle)
+    if (
+      linkHref &&
+      !link.classList.contains("dropdown-toggle") &&
+      (currentPage === linkHref ||
+        currentPage.includes(linkHref.replace(".html", "")))
+    ) {
+      link.classList.add("active");
+      link.closest(".nav-item")?.classList.add("active");
+    }
+  });
+  // ---------------------
+  const actionMenuLinks = document.querySelectorAll(".action-menu > a");
+
+  actionMenuLinks.forEach((link) => {
+    const linkHref = link.getAttribute("href");
+
+    // Check if current page matches (for Cart and Login pages)
+    if (
+      linkHref &&
+      (currentPage === linkHref ||
+        currentPage.includes(linkHref.replace(".html", "")))
+    ) {
+      link.classList.add("active");
+    }
+  });
 });
