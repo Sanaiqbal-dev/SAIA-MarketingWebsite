@@ -18926,35 +18926,23 @@ textarea.form-control-lg {
   padding: 0;
 }
 
+/* Rotate dropdown caret for dropdown items */
+.dropdown-toggle::after {
+  transition: transform 0.3s ease;
+}
+
+.dropdown.show > .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
 /* Apply hover effect to the link itself */
 .navbar-nav .nav-link,
 .action-menu > * {
   padding: 28px 20px;
+  border-radius: 0.5rem;
   position: relative;
   display: inline-block;
   border-bottom: 4px solid transparent;
-}
-
-/* Simple bottom border on hover */
-.navbar-nav .nav-link:hover,
-.action-menu > *:hover {
-  border-bottom: 4px solid #9da4ae;
-  border-radius: 8px;
-  background-color: #f3f4f6;
-}
-
-/* Active/Selected state - green background with bottom border */
-.action-menu > a.active {
-  background-color: var(--bs-primary) !important;
-  color: #fff !important;
-  border-radius: 8px;
-  text-decoration: none !important;
-  border-bottom: 4px solid #54c08a !important;
-}
-
-/* Make icons white on active state */
-.action-menu > a.active i {
-  color: #fff !important;
 }
 
 .stat-card {
@@ -19045,12 +19033,20 @@ textarea.form-control-lg {
 
 .row.g-4 > [class*=col-] > .service-card {
   flex: 1;
-} /* Each dropdown should be an isolated hover zone */
+}
+
 .nav-item.dropdown-hover {
   position: relative;
 }
-
-/* Fix for full-width submenu — make sure it stays scoped to this li */
+.nav-item.dropdown-hover .toggle-icon {
+  display: inline-block;
+  transform-origin: center;
+  font-size: 0.9rem;
+  text-shadow: 0.4px 0 currentColor;
+}
+.nav-item.dropdown-hover:hover > .nav-link .toggle-icon {
+  transform: rotate(180deg);
+}
 .nav-item.dropdown-hover .dropdown-menu-hover {
   display: none;
   position: absolute;
@@ -19058,19 +19054,18 @@ textarea.form-control-lg {
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-  max-width: none;
-  padding: 1.5rem 5rem; /* match navbar px-5 */
+  padding: 1.5rem 5rem;
   background: #fff;
-  border: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
   z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
 }
-
-/* Show only the hovered li's submenu */
-.nav-item.dropdown-hover:hover > .dropdown-menu-hover,
-.nav-item.dropdown-hover .dropdown-menu-hover:hover {
+.nav-item.dropdown-hover:hover > .dropdown-menu-hover {
   display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Prevent flicker — create a hover bridge between the parent and menu */
@@ -19114,7 +19109,8 @@ textarea.form-control-lg {
   visibility: visible;
 }
 
-.nav-link {
+.nav-link,
+action-menu > a {
   color: #333;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -19127,24 +19123,81 @@ textarea.form-control-lg {
 .nav-link:hover {
   background-color: #f3f4f6;
   text-decoration: none !important;
+  transition: background-color 0.2s ease;
 }
 
-/* Active/Selected state - green background with underline (same style as hover) */
-.nav-item.active > .nav-link,
-.nav-link.active {
-  border-bottom: 4px solid #54c08a;
-  border-radius: 4px;
-  color: white;
+.navbar-nav .nav-link {
+  overflow: visible;
+} /* =========================
+   NAVBAR MAIN LINKS
+========================= */
+.navbar-nav .nav-link.active {
+  position: relative;
+  color: #fff;
   background-color: var(--bs-primary);
+  border-radius: 8px;
+  border-bottom: none !important;
 }
-
-/* Make sure hover doesn't override active state */
-.navbar-nav .nav-item.active > .nav-link:hover,
 .navbar-nav .nav-link.active:hover {
-  border-bottom: 4px solid #54c08a;
-  border-radius: 4px;
-  color: white;
+  color: #fff;
   background-color: var(--bs-primary);
+}
+.navbar-nav .nav-link.active::before {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 15%;
+  width: 70%;
+  height: 6px;
+  background-color: #54c08a;
+  border-radius: 10px;
+}
+
+.action-menu > a.active {
+  position: relative;
+  color: #fff !important;
+  background-color: var(--bs-primary);
+  border-radius: 8px;
+  text-decoration: none !important;
+}
+.action-menu > a.active:hover {
+  color: #fff;
+  background-color: var(--bs-primary);
+}
+.action-menu > a.active::before {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 15%;
+  width: 70%;
+  height: 6px;
+  background-color: #54c08a;
+  border-radius: 10px;
+}
+
+.navbar-nav .nav-link:not(.active):hover,
+.action-menu > *:not(.active):hover {
+  background-color: #f3f4f6;
+}
+.navbar-nav .nav-link:not(.active):hover::before,
+.action-menu > *:not(.active):hover::before {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 15%;
+  width: 70%;
+  height: 6px;
+  background-color: #9da4ae;
+  border-radius: 10px;
+}
+
+.offcanvas a {
+  white-space: normal;
+  padding: 4px;
+  border-radius: 8px;
+}
+.offcanvas a:hover {
+  background-color: #fafafa;
 }
 
 .social-icon {

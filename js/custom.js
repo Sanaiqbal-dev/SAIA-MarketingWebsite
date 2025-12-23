@@ -380,6 +380,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Get all navigation links with the mobile-nav-link class
+
   const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
   const offcanvasElement = document.getElementById("mobileNav");
 
@@ -424,63 +425,48 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
-
-  // ---------------------
-  // SET ACTIVE NAV ITEM BASED ON CURRENT PAGE
-  // ---------------------
   const currentPage = window.location.pathname.split("/").pop();
 
-  // Check dropdown items first (child links in dropdown menus)
-  const dropdownLinks = document.querySelectorAll(".dropdown-menu-hover a");
-  dropdownLinks.forEach((dropdownLink) => {
-    const linkHref = dropdownLink.getAttribute("href");
+  // Clear all active states
+  document
+    .querySelectorAll(".nav-link, .nav-item, .action-menu a")
+    .forEach((el) => el.classList.remove("active"));
 
-    if (
-      linkHref &&
-      (currentPage === linkHref ||
-        currentPage.includes(linkHref.replace(".html", "")))
-    ) {
-      // Find the parent nav-item with dropdown-hover class
-      const parentNavItem = dropdownLink.closest(".dropdown-hover");
-      if (parentNavItem) {
-        // Add active class to the parent nav-item and its nav-link
-        parentNavItem.classList.add("active");
-        const parentNavLink = parentNavItem.querySelector(".nav-link");
-        if (parentNavLink) {
-          parentNavLink.classList.add("active");
-        }
+  // 🔹 Handle dropdown child links
+  document.querySelectorAll(".dropdown-menu-hover a").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (!href || href === "#") return;
+
+    if (currentPage === href) {
+      const parentItem = link.closest(".dropdown-hover");
+      const parentLink = parentItem?.querySelector(".dropdown-trigger");
+
+      parentItem?.classList.add("active");
+      parentLink?.classList.add("active");
+    }
+  });
+
+  // 🔹 Handle top-level nav links (non-dropdown)
+  document
+    .querySelectorAll(
+      ".navbar-nav > .nav-item > .nav-link:not(.dropdown-trigger)"
+    )
+    .forEach((link) => {
+      const href = link.getAttribute("href");
+      if (!href || href === "#") return;
+
+      if (currentPage === href) {
+        link.classList.add("active");
+        link.closest(".nav-item")?.classList.add("active");
       }
-    }
-  });
+    });
 
-  // Then check top-level nav links (like Library)
-  const navLinks = document.querySelectorAll(".nav-link");
-  navLinks.forEach((link) => {
-    const linkHref = link.getAttribute("href");
+  // 🔹 Action menu
+  document.querySelectorAll(".action-menu a").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (!href || href === "#") return;
 
-    // Only mark as active if it's a direct link (not a dropdown toggle)
-    if (
-      linkHref &&
-      !link.classList.contains("dropdown-toggle") &&
-      (currentPage === linkHref ||
-        currentPage.includes(linkHref.replace(".html", "")))
-    ) {
-      link.classList.add("active");
-      link.closest(".nav-item")?.classList.add("active");
-    }
-  });
-  // ---------------------
-  const actionMenuLinks = document.querySelectorAll(".action-menu > a");
-
-  actionMenuLinks.forEach((link) => {
-    const linkHref = link.getAttribute("href");
-
-    // Check if current page matches (for Cart and Login pages)
-    if (
-      linkHref &&
-      (currentPage === linkHref ||
-        currentPage.includes(linkHref.replace(".html", "")))
-    ) {
+    if (currentPage === href) {
       link.classList.add("active");
     }
   });
