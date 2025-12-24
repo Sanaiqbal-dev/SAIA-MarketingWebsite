@@ -108,21 +108,25 @@
     <div class="bg-light">
       <div class="container-fluid px-8">
         <!-- Main Bar -->
-        <div class="d-flex align-items-center py-2">
-          <img
-            src="../../images/ic-flag.svg"
-            alt="Saudi Flag"
-            class="me-2"
-            width="24"
-            height="24"
-            loading="lazy"
-          />
-          <small class="text-black"
-            >A government website registered with the Digital Government
-            Authority.</small
-          >
+        <div
+          class="d-flex flex-column flex-md-row align-items-start align-items-md-center py-2 gap-2"
+        >
+          <div class="d-flex align-items-center">
+            <img
+              src="../../images/ic-flag.svg"
+              alt="Saudi Flag"
+              class="me-2 flex-shrink-0"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
+            <small class="text-black">
+              A government website registered with the Digital Government
+              Authority.
+            </small>
+          </div>
           <a
-            class="text-primary ms-2 text-decoration-none"
+            class="text-primary text-decoration-none flex-shrink-0"
             role="button"
             id="togglePopup"
             onclick="togglePopup()"
@@ -211,7 +215,10 @@
     <nav class="navbar navbar-light bg-white sticky-top">
       <div class="container-fluid px-5">
         <div class="d-flex align-items-center gap-10">
-          <a class="navbar-brand d-flex align-items-center" href="#">
+          <a
+            class="navbar-brand d-flex align-items-center"
+            href="homepage.html"
+          >
             <img
               src="../../images/ic-logo.svg"
               alt="SIIA Logo"
@@ -220,9 +227,11 @@
           </a>
           <ul class="navbar-nav d-flex flex-row mx-auto mb-0">
             <li class="nav-item dropdown-hover" style="position: static">
-              <a class="nav-link dropdown-toggle fw-semibold" href="#"
-                >About Us</a
-              >
+              <a class="nav-link dropdown-trigger fw-semibold" href="#"
+                >About Us<i
+                  class="ms-2 toggle-icon fw-bold bi bi-chevron-down"
+                ></i
+              ></a>
               <div class="dropdown-menu-hover">
                 <div class="container">
                   <div class="row">
@@ -248,8 +257,10 @@
               </div>
             </li>
             <li class="nav-item dropdown-hover" style="position: static">
-              <a class="nav-link dropdown-toggle fw-semibold" href="#">
-                Our Services
+              <a class="nav-link dropdown-trigger fw-semibold" href="#">
+                Our Services<i
+                  class="ms-2 toggle-icon fw-bold bi bi-chevron-down"
+                ></i>
               </a>
               <div class="dropdown-menu-hover">
                 <div class="container">
@@ -330,9 +341,11 @@
               </div>
             </li>
             <li class="nav-item dropdown-hover" style="position: static">
-              <a class="nav-link dropdown-toggle fw-semibold" href="#"
-                >Memberships</a
-              >
+              <a class="nav-link dropdown-trigger fw-semibold" href="#"
+                >Memberships<i
+                  class="ms-2 toggle-icon fw-bold bi bi-chevron-down"
+                ></i
+              ></a>
               <div class="dropdown-menu-hover">
                 <div class="container">
                   <div class="row">
@@ -394,9 +407,11 @@
               <a class="nav-link fw-semibold" href="library.html">Library</a>
             </li>
             <li class="nav-item dropdown-hover" style="position: static">
-              <a class="nav-link dropdown-toggle fw-semibold" href="#"
-                >Contact Us</a
-              >
+              <a class="nav-link dropdown-trigger fw-semibold" href="#"
+                >Contact Us<i
+                  class="ms-2 toggle-icon fw-bold bi bi-chevron-down"
+                ></i
+              ></a>
               <div class="dropdown-menu-hover">
                 <div class="container">
                   <div class="row">
@@ -517,7 +532,7 @@
       aria-labelledby="offcanvasNavLabel"
     >
       <div class="offcanvas-header border-bottom">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="homepage.html">
           <img
             src="../../images/ic-logo.svg"
             alt="SIIA Logo"
@@ -841,7 +856,7 @@
             ></button>
           </div>
           <div
-            class="carousel-inner py-20 px-20 d-flex align-items-center"
+            class="carousel-inner py-5 px-5 py-lg-20 px-lg-20 d-flex align-items-center"
             bis_skin_checked="1"
           >
             <div class="carousel-item" bis_skin_checked="1">
@@ -895,9 +910,9 @@
     </section>
 
     <!-- About Section -->
-    <section class="py-10 px-20 position-relative">
+    <section class="py-5 px-5 py-lg-10 px-lg-20 position-relative">
       <div class="container">
-        <div class="row align-items-center mb-5">
+        <div class="row align-items-center mb-5 gap-4 gap-lg-0">
           <div
             class="col-lg-12 d-flex justify-content-between align-items-center"
           >
@@ -960,8 +975,8 @@
     </section>
 
     <!-- Our Services -->
-    <section class="py-10 bg-light">
-      <div class="container px-20">
+    <section class="py-5 py-lg-10 bg-light">
+      <div class="container px-5 px-lg-20">
         <div class="row align-items-center mb-4">
           <div class="col">
             <h2 class="fw-bold">Our Services</h2>
@@ -1105,27 +1120,84 @@
                   workflows and ensure compliance but also enhance
                   decision-making, paving the way for sustainable growth.
                 </p>
-                <a href="eventDetail.html" class="btn btn-light btn-sm"
-                  >Explore Events</a
-                >
               </div>
+              <a href="eventDetail.html" class="btn btn-light btn-sm"
+                >Explore Events</a
+              >
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="service-card">
+              <div class="service-card-content">
+                <div class="mb-4">
+                  <img
+                    src="../../images/ic-service-course.svg"
+                    alt="Professional"
+                    width="48"
+                    height="48"
+                  />
+                </div>
+                <h5 class="fw-semibold mb-3 text-white">
+                  Courses for Professional Readiness Support Initiative
+                </h5>
+                <p class="small mb-4 text-white">
+                  This initiative provides courses to boost professional
+                  readiness. Participants will acquire vital skills and
+                  knowledge for career success, focusing on practical
+                  applications and real-world scenarios. Join us to enhance your
+                  professional journey!
+                </p>
+              </div>
+              <a href="courseList.html" class="btn btn-light btn-sm"
+                >Explore Courses</a
+              >
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="service-card">
+              <div class="service-card-content">
+                <div class="mb-4">
+                  <img
+                    src="../../images/ic-service-program.svg"
+                    alt="Professional"
+                    width="48"
+                    height="48"
+                  />
+                </div>
+                <h5 class="fw-semibold mb-3 text-white">
+                  Harvard's Leadership Development in Internal Auditing
+                </h5>
+                <p class="small mb-4 text-white">
+                  Discover Harvard's Leadership Development Programs in
+                  Auditing, aimed at boosting essential skills for success.
+                  These programs foster leadership, strategic thinking, and
+                  ethical decision-making to equip participants for today's
+                  challenges.
+                </p>
+              </div>
+              <a href="programList.html" class="btn btn-light btn-sm"
+                >Explore Programs</a
+              >
             </div>
           </div>
         </div>
-        <div class="serviceCarousel-pagination"></div>
+        <div class="swiper-pagination serviceCarousel-pagination"></div>
       </div>
     </section>
     <!-- Articles and News -->
-    <section class="py-10 px-20">
+    <section class="py-5 px-5 py-lg-10 px-lg-20">
       <div class="container">
         <div class="row align-items-center mb-4">
           <div
-            class="col-lg-12 d-flex justify-content-between align-items-center"
+            class="col-lg-12 d-flex justify-content-between align-items-center gap-2"
           >
-            <h2 class="fw-bold mb-3">Articles and News Section</h2>
-            <a href="newsArticles.html" class="btn btn-outline-secondary"
-              >View All</a
+            <h2 class="fw-bold mb-3 flex-grow-1">Articles and News Section</h2>
+            <a
+              href="newsArticles.html"
+              class="btn btn-outline-secondary px-3 text-nowrap flex-shrink-0"
             >
+              View All
+            </a>
           </div>
           <p class="text-muted">
             Stay updated with the latest news and insights in internal auditing
@@ -1213,7 +1285,7 @@
     </section>
 
     <!-- Partners Section -->
-    <section class="py-10 px-20">
+    <section class="py-5 px-5 py-lg-10 px-lg-20">
       <div class="container">
         <div class="mb-4">
           <h2 class="fw-bold">Partner Section / Certifications</h2>

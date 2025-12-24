@@ -1,24 +1,51 @@
 // ---------------------
 // Swiper Carousels
 // ---------------------
+const slideCount = document.querySelectorAll(
+  ".serviceCarousel .swiper-slide"
+).length;
+
 var swiper1 = new Swiper(".serviceCarousel", {
-  autoplay: { delay: 5000 },
-  slidesPerView: 2,
+  slidesPerView: 1.5,
   spaceBetween: 16,
-  breakpoints: {
-    320: { slidesPerView: 2 },
-    768: { slidesPerView: 3 },
-    1200: { slidesPerView: 5 },
+  loop: false, // We'll enable conditionally in breakpoints
+  centeredSlides: true,
+  autoplay: {
+    delay: 5000,
   },
-  loop: true,
-  loopAdditionalSlides: 5,
   slidesPerGroup: 1,
   pagination: {
     el: ".serviceCarousel-pagination",
     clickable: true,
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.5,
+      centeredSlides: true,
+      loop: slideCount > 2,
+    },
+    576: {
+      slidesPerView: Math.min(2, slideCount), // Show max available
+      centeredSlides: slideCount < 3, // Center if we have fewer slides
+      loop: slideCount > 2,
+    },
+    768: {
+      slidesPerView: Math.min(3, slideCount),
+      centeredSlides: slideCount < 4,
+      loop: slideCount > 3,
+    },
+    1024: {
+      slidesPerView: Math.min(4, slideCount),
+      centeredSlides: slideCount < 5,
+      loop: slideCount > 4,
+    },
+    1350: {
+      slidesPerView: Math.min(5, slideCount),
+      centeredSlides: slideCount < 6,
+      loop: slideCount > 5,
+    },
+  },
 });
-
 var swiper2 = new Swiper(".partnerSwiper", {
   slidesPerView: "auto",
   spaceBetween: 20,
@@ -47,6 +74,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // ---------------------
   // SEARCH DROPDOWN
   // ---------------------
+  // ---------------------
+  // SEARCH DROPDOWN
+  // ---------------------
   const searchDropdown = document.getElementById("searchDropdown");
 
   document.querySelectorAll(".search-trigger").forEach((btn) => {
@@ -60,12 +90,32 @@ document.addEventListener("DOMContentLoaded", function () {
       if (instance) instance.hide();
 
       if (searchDropdown) {
-        searchDropdown.style.display =
-          searchDropdown.style.display === "block" ? "none" : "block";
+        if (searchDropdown.style.display === "block") {
+          // Close dropdown and remove active
+          searchDropdown.style.display = "none";
+          this.classList.remove("active");
+        } else {
+          // Open dropdown and add active
+          searchDropdown.style.display = "block";
+          this.classList.add("active");
+        }
       }
     });
   });
 
+  document.addEventListener("click", (e) => {
+    if (
+      searchDropdown &&
+      !e.target.closest(".search-trigger") &&
+      !e.target.closest("#searchDropdown")
+    ) {
+      searchDropdown.style.display = "none";
+      // Only remove active from search triggers
+      document.querySelectorAll(".search-trigger").forEach((btn) => {
+        btn.classList.remove("active");
+      });
+    }
+  });
   document.addEventListener("click", (e) => {
     if (
       searchDropdown &&
@@ -283,4 +333,168 @@ document.addEventListener("DOMContentLoaded", function () {
     alert("Thank you for your rating of " + currentRating + " stars!");
     closeRating();
   };
+
+  // Initialize Swiper
+  // Initialize Swiper
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".serviceCarousel", {
+      // Enable loop mode
+      loop: true,
+
+      // Enable touch/swipe
+      simulateTouch: true,
+      allowTouchMove: true,
+      touchRatio: 1,
+      touchAngle: 45,
+      grabCursor: true,
+
+      // Autoplay configuration
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+
+      // Pagination
+      pagination: {
+        el: ".serviceCarousel-pagination",
+        clickable: true,
+      },
+
+      // Default spacing
+      spaceBetween: 24,
+
+      // Responsive breakpoints
+      breakpoints: {
+        // Mobile (320px and up)
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 16,
+        },
+        // Small tablets (576px and up)
+        576: {
+          slidesPerView: 1.5,
+          spaceBetween: 20,
+        },
+        // Tablets (768px and up)
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+        // Small desktop (992px and up) - 3 slides
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+        // Medium desktop (1100px and up) - 4 slides
+        1100: {
+          slidesPerView: 4,
+          spaceBetween: 24,
+        },
+        // Large desktop (1600px and up) - 5 slides
+        1600: {
+          slidesPerView: 5,
+          spaceBetween: 24,
+        },
+      },
+
+      // Speed
+      speed: 600,
+
+      // Effect
+      effect: "slide",
+    });
+  });
+
+  // Get all navigation links with the mobile-nav-link class
+
+  const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+  const offcanvasElement = document.getElementById("mobileNav");
+
+  if (offcanvasElement && mobileNavLinks.length > 0) {
+    mobileNavLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        // Prevent default anchor behavior
+        e.preventDefault();
+
+        // Get target section ID from data attribute
+        const targetId = this.getAttribute("data-target");
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          // Get the Bootstrap offcanvas instance
+          const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+
+          // Close the offcanvas first
+          if (bsOffcanvas) {
+            bsOffcanvas.hide();
+          }
+
+          // Wait for offcanvas to close, then scroll to target
+          offcanvasElement.addEventListener(
+            "hidden.bs.offcanvas",
+            function scrollToTarget() {
+              // Smooth scroll to the target section
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+
+              // Remove this event listener after execution to prevent multiple calls
+              offcanvasElement.removeEventListener(
+                "hidden.bs.offcanvas",
+                scrollToTarget
+              );
+            },
+            { once: true }
+          );
+        }
+      });
+    });
+  }
+  const currentPage = window.location.pathname.split("/").pop();
+
+  // Clear all active states
+  document
+    .querySelectorAll(".nav-link, .nav-item, .action-menu a")
+    .forEach((el) => el.classList.remove("active"));
+
+  // 🔹 Handle dropdown child links
+  document.querySelectorAll(".dropdown-menu-hover a").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (!href || href === "#") return;
+
+    if (currentPage === href) {
+      const parentItem = link.closest(".dropdown-hover");
+      const parentLink = parentItem?.querySelector(".dropdown-trigger");
+
+      parentItem?.classList.add("active");
+      parentLink?.classList.add("active");
+    }
+  });
+
+  // 🔹 Handle top-level nav links (non-dropdown)
+  document
+    .querySelectorAll(
+      ".navbar-nav > .nav-item > .nav-link:not(.dropdown-trigger)"
+    )
+    .forEach((link) => {
+      const href = link.getAttribute("href");
+      if (!href || href === "#") return;
+
+      if (currentPage === href) {
+        link.classList.add("active");
+        link.closest(".nav-item")?.classList.add("active");
+      }
+    });
+
+  // 🔹 Action menu
+  document.querySelectorAll(".action-menu a").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (!href || href === "#") return;
+
+    if (currentPage === href) {
+      link.classList.add("active");
+    }
+  });
 });

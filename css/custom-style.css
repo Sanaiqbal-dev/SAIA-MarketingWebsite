@@ -10,21 +10,23 @@
   padding: 0;
 }
 
+/* Rotate dropdown caret for dropdown items */
+.dropdown-toggle::after {
+  transition: transform 0.3s ease;
+}
+
+.dropdown.show > .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
 /* Apply hover effect to the link itself */
 .navbar-nav .nav-link,
 .action-menu > * {
   padding: 28px 20px;
+  border-radius: 0.5rem;
   position: relative;
   display: inline-block;
   border-bottom: 4px solid transparent;
-}
-
-/* Simple bottom border on hover */
-.navbar-nav .nav-link:hover,
-.action-menu > *:hover {
-  border-bottom: 4px solid #9da4ae;
-  border-radius: 4px;
-  background-color: #f3f4f6;
 }
 
 .stat-card {
@@ -102,7 +104,7 @@
   flex-grow: 1;
   text-align: left;
 }
-.service-card .service-card button {
+.service-card .btn {
   position: absolute;
   bottom: 15px;
   left: 15px;
@@ -115,12 +117,20 @@
 
 .row.g-4 > [class*=col-] > .service-card {
   flex: 1;
-} /* Each dropdown should be an isolated hover zone */
+}
+
 .nav-item.dropdown-hover {
   position: relative;
 }
-
-/* Fix for full-width submenu — make sure it stays scoped to this li */
+.nav-item.dropdown-hover .toggle-icon {
+  display: inline-block;
+  transform-origin: center;
+  font-size: 0.9rem;
+  text-shadow: 0.4px 0 currentColor;
+}
+.nav-item.dropdown-hover:hover > .nav-link .toggle-icon {
+  transform: rotate(180deg);
+}
 .nav-item.dropdown-hover .dropdown-menu-hover {
   display: none;
   position: absolute;
@@ -128,19 +138,18 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-  max-width: none;
-  padding: 1.5rem 5rem; /* match navbar px-5 */
+  padding: 1.5rem 5rem;
   background: #fff;
-  border: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
   z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
 }
-
-/* Show only the hovered li’s submenu */
-.nav-item.dropdown-hover:hover > .dropdown-menu-hover,
-.nav-item.dropdown-hover .dropdown-menu-hover:hover {
+.nav-item.dropdown-hover:hover > .dropdown-menu-hover {
   display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Prevent flicker — create a hover bridge between the parent and menu */
@@ -154,7 +163,7 @@
   background: transparent;
 }
 
-/* Keep spacing tight so there’s no dead zone */
+/* Keep spacing tight so there's no dead zone */
 .nav-item.dropdown-hover {
   padding-bottom: 0;
 }
@@ -184,9 +193,95 @@
   visibility: visible;
 }
 
-.nav-link {
+.nav-link,
+action-menu > a {
   color: #333;
   font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+/* Hover state - grey background with underline */
+.nav-link:hover {
+  background-color: #f3f4f6;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease;
+}
+
+.navbar-nav .nav-link {
+  overflow: visible;
+} /* =========================
+   NAVBAR MAIN LINKS
+========================= */
+.navbar-nav .nav-link.active {
+  position: relative;
+  color: #fff;
+  background-color: var(--bs-primary);
+  border-radius: 8px;
+  border-bottom: none !important;
+}
+.navbar-nav .nav-link.active:hover {
+  color: #fff;
+  background-color: var(--bs-primary);
+}
+.navbar-nav .nav-link.active::before {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 15%;
+  width: 70%;
+  height: 6px;
+  background-color: #54c08a;
+  border-radius: 10px;
+}
+
+.action-menu > a.active {
+  position: relative;
+  color: #fff !important;
+  background-color: var(--bs-primary);
+  border-radius: 8px;
+  text-decoration: none !important;
+}
+.action-menu > a.active:hover {
+  color: #fff;
+  background-color: var(--bs-primary);
+}
+.action-menu > a.active::before {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 15%;
+  width: 70%;
+  height: 6px;
+  background-color: #54c08a;
+  border-radius: 10px;
+}
+
+.navbar-nav .nav-link:not(.active):hover,
+.action-menu > *:not(.active):hover {
+  background-color: #f3f4f6;
+}
+.navbar-nav .nav-link:not(.active):hover::before,
+.action-menu > *:not(.active):hover::before {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 15%;
+  width: 70%;
+  height: 6px;
+  background-color: #9da4ae;
+  border-radius: 10px;
+}
+
+.offcanvas a {
+  white-space: normal;
+  padding: 4px;
+  border-radius: 8px;
+}
+.offcanvas a:hover {
+  background-color: #fafafa;
 }
 
 .social-icon {
@@ -399,7 +494,8 @@ body {
   text-decoration: none;
 }
 
-.sitemap ul, .sitemap a {
+.sitemap ul,
+.sitemap a {
   margin-bottom: 16px;
 }
 
@@ -407,4 +503,268 @@ body {
   font-size: 14px;
   line-height: 20px;
   padding: 0px !important;
+}
+
+.feedback-panel {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 6px;
+}
+
+.serviceCarousel {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 3.5rem;
+  overflow: hidden;
+}
+.serviceCarousel * {
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+.tags-container .tag {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border: 1px solid;
+}
+@media (max-width: 576px) {
+  .tags-container .tag {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+.tags-container .tag-success {
+  background-color: #d1fae5;
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+.tags-container .tag-primary {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border-color: #bfdbfe;
+}
+.tags-container .tag-light {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border-color: #e5e7eb;
+}
+
+.swiper-wrapper {
+  padding: 1rem 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: auto;
+}
+.swiper-slide .card {
+  width: 100%;
+  max-width: 380px;
+  height: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.swiper-slide .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 1200px) {
+  .swiper-slide .card {
+    max-width: 350px;
+    padding: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .swiper-slide .card {
+    max-width: 320px;
+  }
+}
+@media (max-width: 576px) {
+  .swiper-slide .card {
+    max-width: 300px;
+    padding: 1rem;
+  }
+}
+.swiper-slide .card-img-top {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .swiper-slide .card-img-top {
+    height: 180px;
+  }
+}
+@media (max-width: 576px) {
+  .swiper-slide .card-img-top {
+    height: 160px;
+  }
+}
+.swiper-slide .card-body {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
+}
+@media (max-width: 576px) {
+  .swiper-slide .card-body {
+    gap: 0.75rem;
+  }
+}
+.swiper-slide .card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #1f2937;
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .swiper-slide .card-title {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .swiper-slide .card-title {
+    font-size: 0.95rem;
+  }
+}
+.swiper-slide .card-text {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+@media (max-width: 576px) {
+  .swiper-slide .card-text {
+    font-size: 0.85rem;
+  }
+}
+.swiper-slide .rating-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  margin-top: auto;
+}
+.swiper-slide .rating-container .stars {
+  display: flex;
+  gap: 0.25rem;
+}
+.swiper-slide .rating-container .stars i {
+  font-size: 1rem;
+}
+@media (max-width: 576px) {
+  .swiper-slide .rating-container .stars i {
+    font-size: 0.9rem;
+  }
+}
+.swiper-slide .rating-container .text-warning {
+  color: #f59e0b !important;
+}
+.swiper-slide .btn {
+  margin-top: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+@media (max-width: 576px) {
+  .swiper-slide .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #d1d5db;
+  opacity: 1;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+.swiper-pagination-bullet:hover {
+  background-color: #9ca3af;
+}
+@media (max-width: 576px) {
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #16a34a;
+  width: 12px;
+  height: 12px;
+}
+@media (max-width: 576px) {
+  .swiper-pagination-bullet-active {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Center carousel content when there are few slides */
+.serviceCarousel .swiper-wrapper {
+  justify-content: flex-start;
+}
+
+/* When slides don't fill the viewport, center them */
+@media (min-width: 1350px) {
+  .serviceCarousel[data-slides="1"] .swiper-wrapper,
+  .serviceCarousel[data-slides="2"] .swiper-wrapper,
+  .serviceCarousel[data-slides="3"] .swiper-wrapper,
+  .serviceCarousel[data-slides="4"] .swiper-wrapper {
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1349px) {
+  .serviceCarousel[data-slides="1"] .swiper-wrapper,
+  .serviceCarousel[data-slides="2"] .swiper-wrapper,
+  .serviceCarousel[data-slides="3"] .swiper-wrapper {
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .serviceCarousel[data-slides="1"] .swiper-wrapper,
+  .serviceCarousel[data-slides="2"] .swiper-wrapper {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=custom-style.css.map */

@@ -29,21 +29,26 @@
     <div class="bg-light">
       <div class="container-fluid px-8">
         <!-- Main Bar -->
-        <div class="d-flex align-items-center py-2">
-          <img
-            src="../../images/ic-flag.svg"
-            alt="Saudi Flag"
-            class="me-2"
-            width="24"
-            height="24"
-            loading="lazy"
-          />
-          <small class="text-black"
-            >A government website registered with the Digital Government
-            Authority.</small
-          >
+
+        <div
+          class="d-flex flex-column flex-md-row align-items-start align-items-md-center py-2 gap-2"
+        >
+          <div class="d-flex align-items-center">
+            <img
+              src="../../images/ic-flag.svg"
+              alt="Saudi Flag"
+              class="me-2 flex-shrink-0"
+              width="24"
+              height="24"
+              loading="lazy"
+            />
+            <small class="text-black">
+              A government website registered with the Digital Government
+              Authority.
+            </small>
+          </div>
           <a
-            class="text-primary ms-2 text-decoration-none"
+            class="text-primary text-decoration-none flex-shrink-0"
             role="button"
             id="togglePopup"
             onclick="togglePopup()"
@@ -132,7 +137,10 @@
     <nav class="navbar navbar-light bg-white sticky-top">
       <div class="container-fluid px-5">
         <div class="d-flex align-items-center gap-10">
-          <a class="navbar-brand d-flex align-items-center" href="#">
+          <a
+            class="navbar-brand d-flex align-items-center"
+            href="homepage.html"
+          >
             <img
               src="../../images/ic-logo.svg"
               alt="SIIA Logo"
@@ -141,9 +149,11 @@
           </a>
           <ul class="navbar-nav d-flex flex-row mx-auto mb-0">
             <li class="nav-item dropdown-hover" style="position: static">
-              <a class="nav-link dropdown-toggle fw-semibold" href="#"
-                >About Us</a
-              >
+              <a class="nav-link dropdown-trigger fw-semibold" href="#"
+                >About Us<i
+                  class="ms-2 toggle-icon fw-bold bi bi-chevron-down"
+                ></i
+              ></a>
               <div class="dropdown-menu-hover">
                 <div class="container">
                   <div class="row">
@@ -169,8 +179,10 @@
               </div>
             </li>
             <li class="nav-item dropdown-hover" style="position: static">
-              <a class="nav-link dropdown-toggle fw-semibold" href="#">
-                Our Services
+              <a class="nav-link dropdown-trigger fw-semibold" href="#">
+                Our Services<i
+                  class="ms-2 toggle-icon fw-bold bi bi-chevron-down"
+                ></i>
               </a>
               <div class="dropdown-menu-hover">
                 <div class="container">
@@ -251,9 +263,11 @@
               </div>
             </li>
             <li class="nav-item dropdown-hover" style="position: static">
-              <a class="nav-link dropdown-toggle fw-semibold" href="#"
-                >Memberships</a
-              >
+              <a class="nav-link dropdown-trigger fw-semibold" href="#"
+                >Memberships<i
+                  class="ms-2 toggle-icon fw-bold bi bi-chevron-down"
+                ></i
+              ></a>
               <div class="dropdown-menu-hover">
                 <div class="container">
                   <div class="row">
@@ -315,9 +329,11 @@
               <a class="nav-link fw-semibold" href="library.html">Library</a>
             </li>
             <li class="nav-item dropdown-hover" style="position: static">
-              <a class="nav-link dropdown-toggle fw-semibold" href="#"
-                >Contact Us</a
-              >
+              <a class="nav-link dropdown-trigger fw-semibold" href="#"
+                >Contact Us<i
+                  class="ms-2 toggle-icon fw-bold bi bi-chevron-down"
+                ></i
+              ></a>
               <div class="dropdown-menu-hover">
                 <div class="container">
                   <div class="row">
@@ -438,7 +454,7 @@
       aria-labelledby="offcanvasNavLabel"
     >
       <div class="offcanvas-header border-bottom">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="homepage.html">
           <img
             src="../../images/ic-logo.svg"
             alt="SIIA Logo"
@@ -726,7 +742,7 @@
       </div>
     </div>
 
-    <section class="px-20 py-10">
+    <section class="p-5 px-md-20 py-md-10">
       <div class="d-flex flex-column gap-6">
         <!--Breadcrumb-->
         <div class="container">
@@ -762,7 +778,7 @@
         <!-- Course List -->
 
         <div class="row g-6">
-          <div class="col-md-4">
+          <div class="col-12 col-sm-6 col-lg-4">
             <div class="card p-4 rounded-4 gap-4">
               <img
                 src="../../images/bg-course-item.svg"
@@ -775,22 +791,13 @@
                 </h5>
                 <p class="card-text">Card content placeholder text goes here</p>
                 <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                <div class="tags-container">
+                  <span
+                    class="tag border-success-subtle bg-success-subtle text-primary"
+                    >SPC</span
                   >
-                    SPC
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Arabic
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Online
-                  </p>
+                  <span class="tag tag-primary">Arabic</span>
+                  <span class="tag tag-light">Online</span>
                 </div>
                 <div class="d-flex flex-column gap-1">
                   <!-- 4 filled stars -->
@@ -814,7 +821,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-12 col-sm-6 col-lg-4">
             <div class="card p-4 rounded-4 gap-4">
               <img
                 src="../../images/bg-course-item.svg"
@@ -827,22 +834,13 @@
                 </h5>
                 <p class="card-text">Card content placeholder text goes here</p>
                 <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                <div class="tags-container">
+                  <span
+                    class="tag border-success-subtle bg-success-subtle text-primary"
+                    >SPC</span
                   >
-                    SPC
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Arabic
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Online
-                  </p>
+                  <span class="tag tag-primary">Arabic</span>
+                  <span class="tag tag-light">Online</span>
                 </div>
                 <div class="d-flex flex-column gap-1">
                   <!-- 4 filled stars -->
@@ -866,7 +864,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-12 col-sm-6 col-lg-4">
             <div class="card p-4 rounded-4 gap-4">
               <img
                 src="../../images/bg-course-item.svg"
@@ -879,22 +877,57 @@
                 </h5>
                 <p class="card-text">Card content placeholder text goes here</p>
                 <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                <div class="tags-container">
+                  <span
+                    class="tag border-success-subtle bg-success-subtle text-primary"
+                    >SPC</span
                   >
-                    SPC
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
+                  <span class="tag tag-primary">Arabic</span>
+                  <span class="tag tag-light">Online</span>
+                </div>
+
+                <div class="d-flex flex-column gap-1">
+                  <!-- 4 filled stars -->
+                  <div>
+                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+                    <i class="bi bi-star-fill" style="color: #dba102"></i>
+
+                    <!-- 1 empty star (or use bi-star-half for a 4.5 rating) -->
+                    <i class="bi bi-star-fill" style="color: lightgray"></i>
+                  </div>
+                  <span class="text-muted small">12 reviews</span>
+                </div>
+                <a
+                  href="coursePage.html"
+                  class="btn btn-primary"
+                  style="width: fit-content"
+                  >Subscribe Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card p-4 rounded-4 gap-4">
+              <img
+                src="../../images/bg-course-item.svg"
+                class="card-img-top rounded-3"
+                alt="Article"
+              />
+              <div class="card-body d-flex flex-column gap-3">
+                <h5 class="card-title">
+                  Governance, Risk Management, and Compliance (GRC)
+                </h5>
+                <p class="card-text">Card content placeholder text goes here</p>
+                <!-- Tags -->
+                <div class="tags-container">
+                  <span
+                    class="tag border-success-subtle bg-success-subtle text-primary"
+                    >SPC</span
                   >
-                    Arabic
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Online
-                  </p>
+                  <span class="tag tag-primary">Arabic</span>
+                  <span class="tag tag-light">Online</span>
                 </div>
                 <div class="d-flex flex-column gap-1">
                   <!-- 4 filled stars -->
@@ -918,7 +951,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-12 col-sm-6 col-lg-4">
             <div class="card p-4 rounded-4 gap-4">
               <img
                 src="../../images/bg-course-item.svg"
@@ -931,22 +964,13 @@
                 </h5>
                 <p class="card-text">Card content placeholder text goes here</p>
                 <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                <div class="tags-container">
+                  <span
+                    class="tag border-success-subtle bg-success-subtle text-primary"
+                    >SPC</span
                   >
-                    SPC
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Arabic
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Online
-                  </p>
+                  <span class="tag tag-primary">Arabic</span>
+                  <span class="tag tag-light">Online</span>
                 </div>
                 <div class="d-flex flex-column gap-1">
                   <!-- 4 filled stars -->
@@ -970,7 +994,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-12 col-sm-6 col-lg-4">
             <div class="card p-4 rounded-4 gap-4">
               <img
                 src="../../images/bg-course-item.svg"
@@ -983,22 +1007,13 @@
                 </h5>
                 <p class="card-text">Card content placeholder text goes here</p>
                 <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                <div class="tags-container">
+                  <span
+                    class="tag border-success-subtle bg-success-subtle text-primary"
+                    >SPC</span
                   >
-                    SPC
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Arabic
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Online
-                  </p>
+                  <span class="tag tag-primary">Arabic</span>
+                  <span class="tag tag-light">Online</span>
                 </div>
                 <div class="d-flex flex-column gap-1">
                   <!-- 4 filled stars -->
@@ -1022,7 +1037,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-12 col-sm-6 col-lg-4">
             <div class="card p-4 rounded-4 gap-4">
               <img
                 src="../../images/bg-course-item.svg"
@@ -1035,22 +1050,13 @@
                 </h5>
                 <p class="card-text">Card content placeholder text goes here</p>
                 <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                <div class="tags-container">
+                  <span
+                    class="tag border-success-subtle bg-success-subtle text-primary"
+                    >SPC</span
                   >
-                    SPC
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Arabic
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Online
-                  </p>
+                  <span class="tag tag-primary">Arabic</span>
+                  <span class="tag tag-light">Online</span>
                 </div>
                 <div class="d-flex flex-column gap-1">
                   <!-- 4 filled stars -->
@@ -1074,7 +1080,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-12 col-sm-6 col-lg-4">
             <div class="card p-4 rounded-4 gap-4">
               <img
                 src="../../images/bg-course-item.svg"
@@ -1087,22 +1093,13 @@
                 </h5>
                 <p class="card-text">Card content placeholder text goes here</p>
                 <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                <div class="tags-container">
+                  <span
+                    class="tag border-success-subtle bg-success-subtle text-primary"
+                    >SPC</span
                   >
-                    SPC
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Arabic
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Online
-                  </p>
+                  <span class="tag tag-primary">Arabic</span>
+                  <span class="tag tag-light">Online</span>
                 </div>
                 <div class="d-flex flex-column gap-1">
                   <!-- 4 filled stars -->
@@ -1126,7 +1123,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-12 col-sm-6 col-lg-4">
             <div class="card p-4 rounded-4 gap-4">
               <img
                 src="../../images/bg-course-item.svg"
@@ -1139,22 +1136,13 @@
                 </h5>
                 <p class="card-text">Card content placeholder text goes here</p>
                 <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                <div class="tags-container">
+                  <span
+                    class="tag border-success-subtle bg-success-subtle text-primary"
+                    >SPC</span
                   >
-                    SPC
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Arabic
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Online
-                  </p>
+                  <span class="tag tag-primary">Arabic</span>
+                  <span class="tag tag-light">Online</span>
                 </div>
                 <div class="d-flex flex-column gap-1">
                   <!-- 4 filled stars -->
@@ -1178,7 +1166,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-12 col-sm-6 col-lg-4">
             <div class="card p-4 rounded-4 gap-4">
               <img
                 src="../../images/bg-course-item.svg"
@@ -1191,22 +1179,13 @@
                 </h5>
                 <p class="card-text">Card content placeholder text goes here</p>
                 <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                <div class="tags-container">
+                  <span
+                    class="tag border-success-subtle bg-success-subtle text-primary"
+                    >SPC</span
                   >
-                    SPC
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Arabic
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Online
-                  </p>
+                  <span class="tag tag-primary">Arabic</span>
+                  <span class="tag tag-light">Online</span>
                 </div>
                 <div class="d-flex flex-column gap-1">
                   <!-- 4 filled stars -->
@@ -1230,7 +1209,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-12 col-sm-6 col-lg-4">
             <div class="card p-4 rounded-4 gap-4">
               <img
                 src="../../images/bg-course-item.svg"
@@ -1243,22 +1222,13 @@
                 </h5>
                 <p class="card-text">Card content placeholder text goes here</p>
                 <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                <div class="tags-container">
+                  <span
+                    class="tag border-success-subtle bg-success-subtle text-primary"
+                    >SPC</span
                   >
-                    SPC
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Arabic
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Online
-                  </p>
+                  <span class="tag tag-primary">Arabic</span>
+                  <span class="tag tag-light">Online</span>
                 </div>
                 <div class="d-flex flex-column gap-1">
                   <!-- 4 filled stars -->
@@ -1282,7 +1252,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-12 col-sm-6 col-lg-4">
             <div class="card p-4 rounded-4 gap-4">
               <img
                 src="../../images/bg-course-item.svg"
@@ -1295,22 +1265,13 @@
                 </h5>
                 <p class="card-text">Card content placeholder text goes here</p>
                 <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                <div class="tags-container">
+                  <span
+                    class="tag border-success-subtle bg-success-subtle text-primary"
+                    >SPC</span
                   >
-                    SPC
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Arabic
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Online
-                  </p>
+                  <span class="tag tag-primary">Arabic</span>
+                  <span class="tag tag-light">Online</span>
                 </div>
                 <div class="d-flex flex-column gap-1">
                   <!-- 4 filled stars -->
@@ -1334,7 +1295,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-12 col-sm-6 col-lg-4">
             <div class="card p-4 rounded-4 gap-4">
               <img
                 src="../../images/bg-course-item.svg"
@@ -1347,74 +1308,13 @@
                 </h5>
                 <p class="card-text">Card content placeholder text goes here</p>
                 <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
+                <div class="tags-container">
+                  <span
+                    class="tag border-success-subtle bg-success-subtle text-primary"
+                    >SPC</span
                   >
-                    SPC
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Arabic
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Online
-                  </p>
-                </div>
-                <div class="d-flex flex-column gap-1">
-                  <!-- 4 filled stars -->
-                  <div>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-                    <i class="bi bi-star-fill" style="color: #dba102"></i>
-
-                    <!-- 1 empty star (or use bi-star-half for a 4.5 rating) -->
-                    <i class="bi bi-star-fill" style="color: lightgray"></i>
-                  </div>
-                  <span class="text-muted small">12 reviews</span>
-                </div>
-                <a
-                  href="coursePage.html"
-                  class="btn btn-primary"
-                  style="width: fit-content"
-                  >Subscribe Now</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card p-4 rounded-4 gap-4">
-              <img
-                src="../../images/bg-course-item.svg"
-                class="card-img-top rounded-3"
-                alt="Article"
-              />
-              <div class="card-body d-flex flex-column gap-3">
-                <h5 class="card-title">
-                  Governance, Risk Management, and Compliance (GRC)
-                </h5>
-                <p class="card-text">Card content placeholder text goes here</p>
-                <!-- Tags -->
-                <div class="d-flex gap-2">
-                  <p
-                    class="border-success-subtle bg-success-subtle text-primary w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    SPC
-                  </p>
-                  <p
-                    class="w-auto rounded-1 px-2 py-1 d-inline-block fw-medium blue-tag"
-                  >
-                    Arabic
-                  </p>
-                  <p
-                    class="border-light bg-light-subtle text-emphasis w-auto border rounded-1 px-2 py-1 d-inline-block fw-medium"
-                  >
-                    Online
-                  </p>
+                  <span class="tag tag-primary">Arabic</span>
+                  <span class="tag tag-light">Online</span>
                 </div>
                 <div class="d-flex flex-column gap-1">
                   <!-- 4 filled stars -->
