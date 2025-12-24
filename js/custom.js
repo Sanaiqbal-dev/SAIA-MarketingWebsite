@@ -1,24 +1,51 @@
 // ---------------------
 // Swiper Carousels
 // ---------------------
+const slideCount = document.querySelectorAll(
+  ".serviceCarousel .swiper-slide"
+).length;
+
 var swiper1 = new Swiper(".serviceCarousel", {
-  autoplay: { delay: 5000 },
-  slidesPerView: 2,
+  slidesPerView: 1.5,
   spaceBetween: 16,
-  breakpoints: {
-    320: { slidesPerView: 2 },
-    768: { slidesPerView: 3 },
-    1200: { slidesPerView: 5 },
+  loop: false, // We'll enable conditionally in breakpoints
+  centeredSlides: true,
+  autoplay: {
+    delay: 5000,
   },
-  loop: true,
-  loopAdditionalSlides: 5,
   slidesPerGroup: 1,
   pagination: {
     el: ".serviceCarousel-pagination",
     clickable: true,
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.5,
+      centeredSlides: true,
+      loop: slideCount > 2,
+    },
+    576: {
+      slidesPerView: Math.min(2, slideCount), // Show max available
+      centeredSlides: slideCount < 3, // Center if we have fewer slides
+      loop: slideCount > 2,
+    },
+    768: {
+      slidesPerView: Math.min(3, slideCount),
+      centeredSlides: slideCount < 4,
+      loop: slideCount > 3,
+    },
+    1024: {
+      slidesPerView: Math.min(4, slideCount),
+      centeredSlides: slideCount < 5,
+      loop: slideCount > 4,
+    },
+    1350: {
+      slidesPerView: Math.min(5, slideCount),
+      centeredSlides: slideCount < 6,
+      loop: slideCount > 5,
+    },
+  },
 });
-
 var swiper2 = new Swiper(".partnerSwiper", {
   slidesPerView: "auto",
   spaceBetween: 20,

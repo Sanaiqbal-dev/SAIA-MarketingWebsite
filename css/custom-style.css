@@ -104,7 +104,7 @@
   flex-grow: 1;
   text-align: left;
 }
-.service-card .service-card button {
+.service-card .btn {
   position: absolute;
   bottom: 15px;
   left: 15px;
@@ -738,5 +738,33 @@ body {
   .swiper-pagination-bullet-active {
     width: 10px;
     height: 10px;
+  }
+}
+
+/* Center carousel content when there are few slides */
+.serviceCarousel .swiper-wrapper {
+  justify-content: flex-start;
+}
+
+/* When slides don't fill the viewport, center them */
+@media (min-width: 1350px) {
+  .serviceCarousel[data-slides="1"] .swiper-wrapper,
+  .serviceCarousel[data-slides="2"] .swiper-wrapper,
+  .serviceCarousel[data-slides="3"] .swiper-wrapper,
+  .serviceCarousel[data-slides="4"] .swiper-wrapper {
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1349px) {
+  .serviceCarousel[data-slides="1"] .swiper-wrapper,
+  .serviceCarousel[data-slides="2"] .swiper-wrapper,
+  .serviceCarousel[data-slides="3"] .swiper-wrapper {
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .serviceCarousel[data-slides="1"] .swiper-wrapper,
+  .serviceCarousel[data-slides="2"] .swiper-wrapper {
+    justify-content: center;
   }
 }/*# sourceMappingURL=custom-style.css.map */
