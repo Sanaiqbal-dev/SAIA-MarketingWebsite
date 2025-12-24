@@ -334,78 +334,6 @@ document.addEventListener("DOMContentLoaded", function () {
     closeRating();
   };
 
-  // Initialize Swiper
-  // Initialize Swiper
-  document.addEventListener("DOMContentLoaded", function () {
-    const swiper = new Swiper(".serviceCarousel", {
-      // Enable loop mode
-      loop: true,
-
-      // Enable touch/swipe
-      simulateTouch: true,
-      allowTouchMove: true,
-      touchRatio: 1,
-      touchAngle: 45,
-      grabCursor: true,
-
-      // Autoplay configuration
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
-
-      // Pagination
-      pagination: {
-        el: ".serviceCarousel-pagination",
-        clickable: true,
-      },
-
-      // Default spacing
-      spaceBetween: 24,
-
-      // Responsive breakpoints
-      breakpoints: {
-        // Mobile (320px and up)
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 16,
-        },
-        // Small tablets (576px and up)
-        576: {
-          slidesPerView: 1.5,
-          spaceBetween: 20,
-        },
-        // Tablets (768px and up)
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 24,
-        },
-        // Small desktop (992px and up) - 3 slides
-        992: {
-          slidesPerView: 3,
-          spaceBetween: 24,
-        },
-        // Medium desktop (1100px and up) - 4 slides
-        1100: {
-          slidesPerView: 4,
-          spaceBetween: 24,
-        },
-        // Large desktop (1600px and up) - 5 slides
-        1600: {
-          slidesPerView: 5,
-          spaceBetween: 24,
-        },
-      },
-
-      // Speed
-      speed: 600,
-
-      // Effect
-      effect: "slide",
-    });
-  });
-
   // Get all navigation links with the mobile-nav-link class
 
   const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
@@ -453,11 +381,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   const currentPage = window.location.pathname.split("/").pop();
-
-  // Clear all active states
-  document
-    .querySelectorAll(".nav-link, .nav-item, .action-menu a")
-    .forEach((el) => el.classList.remove("active"));
 
   // 🔹 Handle dropdown child links
   document.querySelectorAll(".dropdown-menu-hover a").forEach((link) => {
